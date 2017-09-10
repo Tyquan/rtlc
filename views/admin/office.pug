@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  include nav.pug
+  br
+  div(class="container")
+    div(class="row")
+      div(class="col-md-7")
+        div(id="adminVideoContainer")
+          video(id="localVideo" autoplay)
+        div(id="callOptions")
+          div(class="row")
+            div(class="col-xs-4")
+              button(id="btn-start") Show Me
+            div(class="col-xs-4")
+              button(id="btn-start") Start Recording
+            div(class="col-xs-4")
+              button(id="btn-stop-recording" disabled="") Stop Recording
+      div(class="col-md-5")
+        div(id="textEditor")
+          textarea(class="form-control" placeholder="Enter Javascript Code")
+        br
+        div(id="console")
+
+  script(src="../js/facetime.js")
+  

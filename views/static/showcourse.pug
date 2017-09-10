@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+  div(id="marg")
+  div(id="content-container")
+    div(id="container")
+      if (course)
+        div(class="row")
+          div(class="col-md-6")
+            div(id="courseTitleMargin")
+            h1(class="text-center")= course.title
+          div(class="col-md-6")
+            center
+              img(src=course.imageUrl class="img-responsive")
+        div(class="row")
+          div(class="col-md-12")
+            h3 Description:
+            p(id="mems")
+              span= course.description
+            br
+            h3 Price:
+            p(id="mems")
+              span $
+              span= course.price
+            h3 Prerequisites:
+            p(id="mems")
+              span= course.prerequisites
+            h3 Lesson Length:
+            p(id="mems")
+              span= course.lessons
+                span  Lessons
+      else
+        h1(class="text-center") No Courses Added Yet

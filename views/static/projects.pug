@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  div(id="marg")
+  div(class="container")
+    div(id="content-container")
+      div(class="row")
+        if (projects.length > 0)
+          each project in projects
+            div(class="col-md-3")
+              a(href=project.linkUrl target="_blank")
+                center
+                  img(src=project.imageUrl id="projectImage")
+                h3(class="text-center" id="text")= project.title
+        else
+          h1(class="text-center") No Projects Added Yet

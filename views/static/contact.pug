@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+  div(id="marg")
+    div(id="form-container")
+      div(class="row")
+        div(class="col-md-12")
+          p(id="messageSent")= trunks
+      div(class="row")
+        div(class="col-md-12")
+          form(action="/messages/contactform" method="POST")
+            div(class="row")
+              div(class="col-sm-6")
+                label First Name*
+                input(class="form-control" type="text" name="firstName")
+                br
+                label Email*
+                input(class="form-control" type="text" name="email")
+                br
+              div(class="col-sm-6")
+                label Last Name*
+                input(class="form-control" type="text" name="lastName")
+            label Inquiry*
+            select(class="form-control" name="inquiry")
+              option(value="") Select...
+              option(value="training") I would like to learn
+              option(value="website") I would like a website built
+              option(value="app") I would like an app built
+              option(value="graphics") I would like a graphic to be made
+              option(value="question") I have a question
+            br
+            label Message*
+            textarea(class="form-control" type="textarea" name="message" placeholder="Please Enter Your Availability and Any Questions/Messages You May Have For Me")
+            br
+            input(class="form-control" type="submit" value="Submit")
