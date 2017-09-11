@@ -5,7 +5,6 @@ var User = require('../models/user');
 var Course = require('../models/course');
 var Project = require('../models/project');
 var Message = require('../models/message');
-var craigslistparser = require('craigslistparser');
 var router = express.Router();
 
 // render Dashboard page
@@ -20,7 +19,7 @@ router.get('/allusers', (req, res, next) => {
     User.find({}, (err, data) => {
         if (err) throw err;
         else {
-            res.render('admin/users/allusers', {users: data});
+            res.render('admin/users/allusers', { users: data });
         }
     });
 });
@@ -149,14 +148,14 @@ router.get('/email/:id', (req, res) => {
         }
     });
 });
- 
+
 // render office page
 router.get('/office', (req, res, next) => {
     User.find({}, (err, users) => {
         if (err) {
             throw err;
         } else {
-            res.render('admin/office', {users: users});
+            res.render('admin/office', { users: users });
         }
     });
 });

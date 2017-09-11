@@ -2,7 +2,6 @@ var express = require('express');
 var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 var User = require('../models/user');
-var html2jade = require('html2jade');
 const Course = require('../models/course');
 const Project = require('../models/project');
 
