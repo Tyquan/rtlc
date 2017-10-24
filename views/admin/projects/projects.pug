@@ -1,23 +1,24 @@
 extends ../../layout
 
 block content
-  include ../nav.pug
-  div(class="container")
-    div(class="row")
-      div(class="col-xs-12")
-        h1(class="text-center") Projects
-    br
-    a(href="/admin/createproject") Create A Project
-    br
-    br
-    div("table-responsive")
-      table(class="table table-bordered table-striped table-hover table-condensed")
-        tr
-          th Title
-          th Link Url
-        each project in projects
+  div(id="adminBg")
+    include ../nav.pug
+    div(class="container")
+      div(class="row")
+        div(class="col-xs-12")
+          h1(class="text-center") Projects
+      br
+      a(href="/admin/createproject") Create A Project
+      br
+      br
+      div("table-responsive")
+        table(class="table table-bordered table-striped table-hover table-condensed")
           tr
-            td
-              a(href="/admin/updateBlog")= project.title
-            td
-              a(href=project.linkUrl target="_blank") Go To Website
+            th Title
+            th Link Url
+          each project in projects
+            tr
+              td
+                a(href="/admin/updateBlog")= project.title
+              td
+                a(href=project.linkUrl target="_blank") Go To Website

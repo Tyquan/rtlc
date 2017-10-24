@@ -1,27 +1,28 @@
 extends ../../layout
 
 block content
-  include ../nav.pug
-  div(id="marg")
-  div(class="container")
-    if (user)
-      div(class="row")
-        div(class="col-md-12")
-          h3 Subject: 
-            span=user.inquiry
-      div(class="row")
-        div(class="col-md-6")
-          h4(id="man")
-            span(id="man")=user.firstName 
-            span(id="man")=user.lastName 
-            span(id="man")
-              a(href="#")=user.email
-        div(class="col-md-6")
-          h4
-            span=user.date_created
-      br
-      div(class="row")
-        div(class="col-md-12")
-          p=user.message
-    else
-      h1(class="text-center") No Message Added Yet
+  div(id="adminBg")
+    include ../nav.pug
+    div(id="marg")
+    div(class="container")
+      if (user)
+        div(class="row")
+          div(class="col-md-12")
+            h3 Subject: 
+              span=user.inquiry
+        div(class="row")
+          div(class="col-md-6")
+            h4(id="man")
+              span(id="man")=user.firstName 
+              span(id="man")=user.lastName 
+              span(id="man")
+                a(href="#")=user.email
+          div(class="col-md-6")
+            h4
+              span=user.date_created
+        br
+        div(class="row")
+          div(class="col-md-12")
+            p=user.message
+      else
+        h1(class="text-center") No Message Added Yet

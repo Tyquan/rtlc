@@ -1,30 +1,24 @@
 extends ../layout
 
 block content
-  div(class="row")
-    div(class="col-xs-12")
-      div(id="courseBg")
-        div(id="course-stuff")
-          h1 Book A Private One on One Session
-          p Reddicktech offers private one on one training courses to teach you how to properly build and deploy web applications
-  br
+  div(id="marg")
   div(class="container")
     div(class="row")
       div(class="col-xs-12")
         h2(class="text-center") Private Online Video Training Available!
         br
-        h4 Thanks to the creators of Teamviewer and FaceTime.
-        h4 Reddicktech now offers video training sessions for all courses provided.
+        h4(class="text-center") Thanks to the creators of Teamviewer and FaceTime.
+        h4(class="text-center") Reddicktech now offers video training sessions for all courses provided.
   br
   div(class="container")
-    div(id="content-container")
-      div(class="row")
-        if (courses.length > 0)
-          each course in courses
-            div(class="col-md-4")
-              a(href="/static/showcourse/" + course.id)
-                center
-                  img(src=course.imageUrl id="courseImage")
-                h3(class="text-center" id="text")= course.title
-        else
-          h1(class="text-center") No Courses Added Yet
+    hr
+    div(class="row")
+      if (courses.length > 0)
+        each course in courses
+          div(class="col-md-2")
+            a(href="/static/showcourse/" + course.id)
+              center
+                img(src=course.imageUrl id="courseImage")
+              h3(class="text-center" id="text")= course.title
+      else
+        h1(class="text-center") No Courses Added Yet

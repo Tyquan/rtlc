@@ -7,7 +7,7 @@ block content
         div(class="col-md-12")
           p(id="messageSent")= trunks
       div(class="row")
-        div(class="col-md-12")
+        div(class="col-md-6")
           form(action="/messages/contactform" method="POST")
             div(class="row")
               div(class="col-sm-6")
@@ -33,3 +33,32 @@ block content
             textarea(class="form-control" type="textarea" name="message" placeholder="Please Enter Your Availability and Any Questions/Messages You May Have For Me")
             br
             input(class="form-control" type="submit" value="Submit")
+        div(class="col-md-6")
+          div(class="row")
+            div(class="col-sm-4")
+              img(src="/images/profile.jpg" class="img-responsive")
+            div(class="col-sm-8")
+              h2
+                u Tyquan Reddick
+              h3 Certified Javascript, Python and MongDB Developer
+              h3 Adobe Designer
+          div(class="row")
+            div(class="col-xs-12")
+              h3
+                a(href="mailto:tjreddick@gmail.com")
+                  i(class="fa fa-envelope-o" aria-hidden="true") 
+                a(href="http://www.meetup.com/members/154846722/" target="_blank")
+                  i(class="fa fa-users") 
+                a(href="http://www.github.com/Tyquan" target="_blank")
+                  i(class="fa fa-github") 
+                a(href="https://www.linkedin.com/in/tyquanreddick" target="_blank")
+                  i(class="fa fa-linkedin fa-fw") 
+                a(href="http://codepen.io/Tyquan/" target="_blank")
+                  i(class="fa fa-pencil-square-o") 
+                a(href="http://www.freecodecamp.com/tyquan" target="_blank")
+                  i(class="fa fa-trophy")
+                a(href="https://www.youtube.com/channel/UCJlAkRDaMAMS5Mlr3125ZWA")
+                  i(class="fa fa-youtube" aria-hidden="true") 
+          div(class="row")
+            div(class="col-xs-12")
+              iframe(src="https://www.youtube.com/embed/XO6SV0Mup1E" allowfullscreen="" width="100%" height="225" frameborder="0")

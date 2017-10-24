@@ -1,31 +1,38 @@
-var express = require('express');
-var http = require('http');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var jwt = require('jsonwebtoken');
-var compression = require('compression');
-var config = require('./config/config'); // get our config file
+const express = require('express');
+const http = require('http');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
+const compression = require('compression');
+const config = require('./config/config'); // get our config file
 
-var index = require('./routes/index');
-// var login = require('./routes/login');
-// var admin = require('./routes/admin');
-var statics = require('./routes/static');
-// var messages = require('./routes/messages');
+const index = require('./routes/index');
+const login = require('./routes/login');
+const admin = require('./routes/admin');
+const statics = require('./routes/static');
+const messages = require('./routes/messages');
 
 // mlab connection 
-// var mongoUri = 'mongodb://heroku_3m8wzxwn:737qhdqe8ujlcbvch8rfrtm9em@ds023495.mlab.com:23495/heroku_3m8wzxwn';
-// // mongoose mlab connection
-// mongoose.connect(mongoUri);
+const mongoUri = 'mongodb://tyquan:Jamela17!@ds040027.mlab.com:40027/rtlc';
+// mongoose mlab connection
+mongoose.connect(mongoUri, {
+  useMongoClient: true
+});
+//Get the default connection
+var db = mongoose.connection;
 
-var app = express();
-var server = http.createServer(app);
-var io = require('socket.io').listen(server);
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.set('superSecret', config.secret); // secret variable
+const app = express();
+const server = http.createServer(app);
+const io = require('socket.io').listen(server);
+
+app.set('superSecret', config.secret); // secret constiable
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -40,17 +47,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-// app.use('/login', login);
-// app.use('/admin', admin);
+app.use('/login', login);
+app.use('/admin', admin);
 app.use('/static', statics);
-// app.use('/messages', messages);
+app.use('/messages', messages);
 
-io.sockets.on('connection', function(socket) {
-    socket.on('message', function(message) {
-        console.log('Received message: ' + message);
-        io.sockets.emit('pageview', { 'url': message });
-    });
-});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

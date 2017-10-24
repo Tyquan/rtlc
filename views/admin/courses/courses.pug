@@ -1,23 +1,24 @@
 extends ../../layout
 
 block content
-  include ../nav.pug
-  div(class="container")
-    div(class="row")
-      div(class="col-xs-12")
-        h1(class="text-center") Courses
-    br
-    a(href="/admin/createcourse") Create A Course
-    br
-    br
-    div("table-responsive")
-      table(class="table table-bordered table-striped table-hover table-condensed")
-        tr
-          th Title
-          th Price
-        each course in courses
+  div(id="adminBg")
+    include ../nav.pug
+    div(class="container")
+      div(class="row")
+        div(class="col-xs-12")
+          h1(class="text-center") Courses
+      br
+      a(href="/admin/createcourse") Create A Course
+      br
+      br
+      div("table-responsive")
+        table(class="table table-bordered table-striped table-hover table-condensed")
           tr
-            td
-              a(href="/admin/showcourse/" + course.id)= course.title
-            td $
-              span= course.price
+            th Title
+            th Price
+          each course in courses
+            tr
+              td
+                a(href="/admin/showcourse/" + course.id)= course.title
+              td $
+                span= course.price

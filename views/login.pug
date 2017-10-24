@@ -1,15 +1,16 @@
 extends layout
 
 block content
+  div(id="marg")
   h1 Login Page
-    form(action="/login", method="post")
-        div
+    form(action="/login", method="post" class="form")
+        div(class="form-group")
             label Email
             input(type="email", name="username")
             br
-        div
+        div(class="form-group")
             label Password
             input(type="password", name="password")
             br
-        div
+        div(class="form-group")
             input(type="submit", value="Submit")

@@ -36,7 +36,7 @@ router.post('/', (req, res, next) => {
                     // If user is not an admin
                     if (user.admin != true) {
                       // return the information including token as JSON and send dto dashboard
-                      res.render('dashboard', {
+                      res.render('admin/dashboard', {
                         user,
                         success: true,
                         message: 'New Token Created',
@@ -44,7 +44,7 @@ router.post('/', (req, res, next) => {
                       });
                     } else {
                       // If user is an admin
-                      res.render('allusers', {
+                      res.render('admin/dashboard', {
                         user,
                         success: true,
                         message: 'New Token Created',

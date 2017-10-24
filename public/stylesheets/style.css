@@ -1,7 +1,19 @@
 body {
   padding: 0px;
   margin: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-family: 'Libre Baskerville', serif;
+  background-image: url(../images/main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+#adminBg {
+  background-color: white;
+  color: black;
+  margin: 1%;
 }
 
 a {
@@ -19,10 +31,6 @@ a {
   #main-bg {
     width: 100%;
     height: 600px;
-    background-image: url('../images/main.jpg');
-    background-position: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
     color: white;
     font-family: 'Orbitron', sans-serif;
   }
@@ -102,7 +110,7 @@ a {
     visibility: hidden;
   }
   #textEditor {
-    marigin-top: -500px;
+    margin-top: -500px;
     width: 100%;
     height: 100%;
   }
@@ -203,7 +211,7 @@ a {
   #main-bg {
   }
   #bg-stuff {
-    padding-top: 450px;
+    padding-top: 550px;
     font-size: 1.3em;
   }
   #internet {
@@ -212,7 +220,7 @@ a {
   }
   #courseImage {
     width: 100%;
-    height: 200px;
+    height: 75px;
   }
   #splashLogo {
     font-family: 'Ultra', serif;
@@ -235,7 +243,7 @@ a {
     height: 400px;
   }
   #form-container {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
   }
   #adminVideoContainer {
@@ -249,7 +257,7 @@ a {
   }
   #projectImage {
     width: 100%;
-    height: 200px;
+    height: 75px;
   }
   #text {
     font-size: 1.5em;

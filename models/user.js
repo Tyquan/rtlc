@@ -2,10 +2,8 @@ var mongoose = require('mongoose');
 
 var userSchema = mongoose.Schema({
     name: String,
-    role: String,
     city: String,
     state: String,
-    phone: String,
     admin: {
         type: Boolean,
         default: false
