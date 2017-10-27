@@ -2,6 +2,8 @@ var express = require('express');
 var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 var User = require('../models/user');
+const Service = require('../models/service');
+const Blog = require('../models/blog');
 var Course = require('../models/course');
 var Project = require('../models/project');
 var Message = require('../models/message');
@@ -48,6 +50,79 @@ router.post('/createuser', (req, res, next) => {
     });
 });
 
+/*
+    Services Routes
+*/
+router.get('/allservices', (req, res, next) => {
+    Service.find({}, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.render('admin/services/services', {
+                services: data
+            });
+        }
+    });
+});
+router.get('/createservice', (req, res, next) => {
+    res.render('admin/services/createservice');
+});
+router.post('/createservice', (req, res, next) => {
+    let service = new Service(req.body);
+    service.save().then((data) => {
+        res.redirect('allservices');
+    }).catch((err) => {
+        throw err;
+    });
+});
+router.get('/showservice/:id', (req, res, next) => {
+    Service.findById(req.params.id, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.render('admin/services/showservice', {
+                service: data
+            });
+        }
+    });
+});
+
+/*
+    Blogs Routes
+*/
+router.get('/allblogs', (req, res, next) => {
+    Blog.find({}, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.render('admin/blogs/blogs', {
+                blogs: data
+            });
+        }
+    });
+});
+router.get('/createblog', (req, res, next) => {
+    res.render('admin/blogs/createblog');
+});
+router.post('/createblog', (req, res, next) => {
+    let blog = new Blog(req.body);
+    blog.save().then((data) => {
+        res.redirect('allblogs');
+    }).catch((err) => {
+        throw err;
+    });
+});
+router.get('/showblog/:id', (req, res, next) => {
+    Blog.findById(req.params.id, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.render('admin/blogs/showblog', {
+                blog: data
+            });
+        }
+    });
+});
 
 
 /* Course Routes */

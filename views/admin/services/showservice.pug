@@ -1,0 +1,26 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    include ../nav.pug
+    div(id="content-container")
+      div(id="container")
+        if (service)
+          div(class="row")
+            div(class="col-md-12")
+              form(action="/updateservice/" + service._id method="PUT")
+                label Title
+                input(placeholder=service.title name=service.title class="form-control")
+                br
+                label Image URL
+                input(placeholder=service.imageUrl name=service.imageUrl class="form-control")
+                br
+                label Description
+                textarea(placeholder=service.description name=service.description class="form-control")
+                br
+                label Price
+                input(placeholder=service.price name=service.price class="form-control")
+                br
+                input(class="form-control" type="submit" value="Submit")
+        else
+          h1(class="text-center") No Services Added Yet

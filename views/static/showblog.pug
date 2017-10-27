@@ -10,8 +10,12 @@ block content
             p(class="text-center")
               small= blog.date_added
             center
-              img(src=blog.imageUrl class="img-responsive")
-            div= blog.content
+              img(src=blog.imageUrl class="img-fluid")
+            div
+              h4= blog.description
+            br
+            iframe(src=blog.videoUrl width="100%" height="400px")
+            br
             p
               strong Category:
             p

@@ -1,0 +1,29 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    include ../nav.pug
+    div(id="content-container")
+      div(id="container")
+        if (blog)
+          div(class="row")
+            div(class="col-md-12")
+              form(action="/updateblog/" + blog._id method="PUT")
+                label Title
+                input(placeholder=blog.title name=blog.title class="form-control")
+                br
+                label Image URL
+                input(placeholder=blog.imageUrl name=blog.imageUrl class="form-control")
+                br
+                label Description
+                textarea(placeholder=blog.description name=blog.description class="form-control")
+                br
+                label Video Url
+                input(placeholder=blog.videoUrl name=blog.videoUrl class="form-control")
+                br
+                label Category
+                input(placeholder=blog.category name=blog.category class="form-control")
+                br
+                input(class="form-control" type="submit" value="Submit")
+        else
+          h1(class="text-center") No Courses Added Yet

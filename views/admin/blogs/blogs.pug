@@ -1,0 +1,25 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    include ../nav.pug
+    div(class="container")
+      div(class="row")
+        div(class="col-xs-12")
+          h1(class="text-center") Blogs
+      br
+      a(href="/admin/createblog") Create A Blog
+      br
+      br
+      div("table-responsive")
+        table(class="table table-bordered table-striped table-hover table-condensed")
+          tr
+            th Title
+            th Category
+            th Date Created
+          each blog in blogs
+            tr
+              td
+                a(href="/admin/showblog/" + blog.id)= blog.title
+              td= blog.category
+              td= blog.date_created

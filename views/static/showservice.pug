@@ -3,30 +3,26 @@ extends ../layout
 block content
   div(id="marg")
   div(id="content-container")
-    if (course)
+    if (service)
       div(class="row")
         div(class="col-md-6")
           div(id="courseTitleMargin")
-          h1(class="text-center")= course.title
+          h1(class="text-center")= service.title
         div(class="col-md-6")
           center
-            img(src=course.imageUrl class="img-fluid")
+            img(src=service.imageUrl class="img-fluid")
       div(class="row")
         div(class="col-md-12")
           h3 Description:
           p(id="mems")
-            span= course.description
+            span= service.description
           br
           h3 Price:
           p(id="mems")
             span $
-            span= course.price
-          h3 Prerequisites:
+            span= service.price
+          h3 Category:
           p(id="mems")
-            span= course.prerequisites
-          h3 Lesson Length:
-          p(id="mems")
-            span= course.lessons
-              span  Lessons
+            span= service.category
     else
-      h1(class="text-center") No Courses Added Yet
+      h1(class="text-center") No Services Added Yet

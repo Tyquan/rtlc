@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  div(id="marg")
+  div(class="container")
+    div(class="row")
+      if (services.length > 0)
+        each service in services
+          div(class="col-md-2")
+            a(href=service.linkUrl target="_blank")
+              center
+                img(src=service.imageUrl id="serviceImage")
+              h3(class="text-center" id="text")= service.title
+      else
+        h1(class="text-center") No Services Added Yet
