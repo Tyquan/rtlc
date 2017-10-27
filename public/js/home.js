@@ -1,3 +1,8 @@
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
+
 Magnetic = new function(){
 	
 	var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') != -1) || (navigator.userAgent.toLowerCase().indexOf('iphone') != -1) || (navigator.userAgent.toLowerCase().indexOf('ipad') != -1);
@@ -23,10 +28,15 @@ Magnetic = new function(){
 	
 	var skinIndex = 0;
 	var skins = [{
-		glowA: '#ffff00',
-		glowB: 'rgba(0,143,154,0.0)',
-		particleFill: '#ffffff',
-		fadeFill: '#FFFF7F',
+		//glowA: '#ffff00',
+		//glowB: 'rgba(0,143,154,0.0)',
+		//particleFill: '#ffffff',
+		//fadeFill: '#FFFF7F',
+		glowA: random_rgba(),
+		glowB: random_rgba(),
+		particleFill: random_rgba(),
+		fadeFill: random_rgba(),
+		fadeFill: random_rgba(),
 		useFade: false
 	}];
 
@@ -193,7 +203,7 @@ Magnetic = new function(){
 		var cvy = (window.innerHeight - SCREEN_HEIGHT) * .5;
 		
 		canvas.style.position = 'absolute';
-		canvas.style.left = cvx + 'px';
+		//canvas.style.left = cvx + 'px';
 		// canvas.style.top = cvy + 'px';
 		
 	}

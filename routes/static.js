@@ -39,7 +39,7 @@ router.get('/showservice/:id', (req, res, next) => {
     Blog Routes
 */
 router.get('/allblogs', (req, res, next) => {
-    Blog.find({}, (err, data) => {
+    Blog.find({}).sort({date_created: -1}).exec((err, data) => {
         if (err) {
             throw err;
         } else {
