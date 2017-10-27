@@ -194,7 +194,7 @@ Magnetic = new function(){
 		
 		canvas.style.position = 'absolute';
 		canvas.style.left = cvx + 'px';
-		canvas.style.top = cvy + 'px';
+		// canvas.style.top = cvy + 'px';
 		
 	}
 
