@@ -1,6 +1,7 @@
 extends ../layout
 
 block content
+  div(id="adminmarg")
   div(id="content-container")
     div(id="container")
       if (blog)
@@ -9,16 +10,18 @@ block content
             h1(class="text-center")= blog.title
             p(class="text-center")
               small= blog.date_added
+        div(class="row")
+          div(class="col-md-4")
             center
               img(src=blog.imageUrl class="img-fluid")
+            br
             div
-              h4= blog.description
+              p= blog.description
             br
+            h4 Category:
+            p= blog.category
+            br
+          div(class="col-md-8")
             iframe(src=blog.videoUrl width="100%" height="400px")
-            br
-            p
-              strong Category:
-            p
-              small= blog.category
       else
         h1(class="text-center") No Blogs Added Yet
