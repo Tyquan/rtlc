@@ -9,7 +9,7 @@ block content
           div(class="col-md-2")
             a(href="/static/showservice/" + service.id target="_blank")
               center
-                img(src=service.imageUrl id="serviceImage")
+                img(src=service.imageUrl class="img-fluid")
               h3(class="text-center" id="text")=service.title
       else
         h1(class="text-center") No Services Added Yet
