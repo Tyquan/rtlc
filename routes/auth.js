@@ -5,12 +5,12 @@ var User = require('../models/user');
 var router = express.Router();
 
 /* GET Login Page. */
-router.get('/', (req, res, next)=> {
+router.get('/login', (req, res, next)=> {
     res.render('login');
 });
 
 /* Log user in */
-router.post('/', (req, res, next) => {
+router.post('/login', (req, res, next) => {
     // find the user
     User.findOne({
         username: req.body.username
@@ -33,24 +33,13 @@ router.post('/', (req, res, next) => {
                     var token = jwt.sign(user, 'reddictechlearningcenter', {
                       expiresIn : 60*60*24 // expires in 24 hours
                     });
-                    // If user is not an admin
-                    if (user.admin != true) {
-                      // return the information including token as JSON and send dto dashboard
-                      res.render('admin/dashboard', {
+                    user.loggedIn = true;
+                    res.render('admin/dashboard', {
                         user,
                         success: true,
                         message: 'New Token Created',
                         token: token
-                      });
-                    } else {
-                      // If user is an admin
-                      res.render('admin/dashboard', {
-                        user,
-                        success: true,
-                        message: 'New Token Created',
-                        token: token
-                      });
-                    }
+                    });
                 }
             }
         }

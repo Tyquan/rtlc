@@ -11,7 +11,7 @@ const compression = require('compression');
 const config = require('./config/config'); // get our config file
 
 const index = require('./routes/index');
-const login = require('./routes/login');
+const auth = require('./routes/auth');
 const admin = require('./routes/admin');
 const statics = require('./routes/static');
 const messages = require('./routes/messages');
@@ -43,10 +43,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({resave: true, saveUninitialized: true, secret: 'SomeThingCraydyueodbse', cookie: { maxAge: 60000 }}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/login', login);
+app.use('/auth', auth);
 app.use('/admin', admin);
 app.use('/static', statics);
 app.use('/messages', messages);

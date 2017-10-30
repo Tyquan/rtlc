@@ -3,7 +3,7 @@ extends layout
 block content
   div(id="marg")
   h1 Login Page
-    form(action="/login", method="post" class="form")
+    form(action="/auth/login", method="post" class="form")
         div(class="form-group")
             label Email
             input(type="email", name="username")

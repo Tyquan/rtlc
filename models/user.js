@@ -8,6 +8,10 @@ var userSchema = mongoose.Schema({
         type: Boolean,
         default: false
     },
+    loggedIn: {
+    	type: Boolean,
+        default: false
+    },
     username: String,
     password: String
 });
