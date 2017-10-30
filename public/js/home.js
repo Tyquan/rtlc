@@ -356,5 +356,3 @@ function Magnet() {
 
 
 Magnetic.init();
-
-console.log("help");

@@ -29,8 +29,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 const app = express();
-const server = http.createServer(app);
-const io = require('socket.io').listen(server);
+app.use(compression());
 
 app.set('superSecret', config.secret); // secret constiable
 // view engine setup
