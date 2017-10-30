@@ -2,4 +2,39 @@ extends ../layout
 
 block content
   div(id="adminBg")
-    include nav.pug
+    div
+      div(class="col-sm-2")
+        include nav.pug
+      div(class="col-sm-10")
+        div(class="container")
+          div(class="row")
+            div(class="col")
+              div(id="odd")
+                h3
+                  u Latest Services
+                each s in services
+                  p=s.title
+            div(class="col")
+              h3
+                u Latest Blogs
+              each s in blogs
+                p=s.title
+            div(class="col")
+              div(id="odd")
+                h3
+                  u Latest Courses
+                each s in courses
+                  p=s.title
+            div(class="col")
+              h3
+                u Latest Projects
+              each s in projects
+                p=s.title
+            div(class="col")
+              div(id="odd")
+                h3
+                  u Latest Messages
+                each s in messages
+                  p
+                    span=s.firstName
+                    span=s.lastName        

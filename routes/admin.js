@@ -11,8 +11,88 @@ var router = express.Router();
 
 // render Dashboard page
 router.get('/dashboard', (req, res, next) => {
-    res.render('admin/dashboard', {
-        title: 'Admin Dashbard Page'
+    // let service = Service.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
+    //     if (err) {
+    //         throw err;
+    //     } else {
+    //         console.log(data);
+    //         return data;
+    //     }
+    // });
+    // let blog = Blog.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
+    //     if (err) {
+    //         throw err;
+    //     } else {
+    //         return data;
+    //     }
+    // });
+    // let course = Course.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
+    //     if (err) {
+    //         throw err;
+    //     } else {
+    //         return data;
+    //     }
+    // });
+    // let project = Project.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
+    //     if (err) {
+    //         throw err;
+    //     } else {
+    //         return data;
+    //     }
+    // });
+    // let message = Message.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
+    //     if (err) {
+    //         throw err;
+    //     } else {
+    //         return data;
+    //     }
+    // });
+    // res.render('admin/dashboard', {
+    //     title: 'Admin Dashbard Page',
+    //     service: service,
+    //     blog: blog,
+    //     course: course,
+    //     project: project,
+    //     message: message
+    // });
+    Service.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
+        if (err) {
+            throw err;
+        } else {
+            console.log(data);
+            Blog.find({}).sort({date_created: -1}).limit(5).exec((err, blog)=>{
+                if (err) {
+                    throw err;
+                } else {
+                    Course.find({}).sort({date_created: -1}).limit(5).exec((err, course)=>{
+                        if (err) {
+                            throw err;
+                        } else {
+                            Project.find({}).sort({date_created: -1}).limit(5).exec((err, project)=>{
+                                if (err) {
+                                    throw err;
+                                } else {
+                                    Message.find({}).sort({date_created: -1}).limit(5).exec((err, message)=>{
+                                        if (err) {
+                                            throw err;
+                                        } else {
+                                            res.render('admin/dashboard', {
+                                                title: 'Admin Dashbard Page',
+                                                services: data,
+                                                blogs: blog,
+                                                courses: course,
+                                                projects: project,
+                                                messages: message
+                                            });
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+        }
     });
 });
 

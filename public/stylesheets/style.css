@@ -14,10 +14,16 @@ body {
   background-color: white;
   color: black;
   margin: 1%;
+  font-size: 1.5em;
 }
 
 a {
   color: #00B7FF;
+}
+
+#odd {
+  background-color: #95a5a6;
+  color: #ecf0f1;
 }
 
 /* Mobile View */
