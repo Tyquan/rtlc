@@ -43,7 +43,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({resave: true, saveUninitialized: true, secret: 'SomeThingCraydyueodbse', cookie: { maxAge: 60000 }}));
+//app.use(session({resave: true, saveUninitialized: true, secret: 'SomeThingCraydyueodbse', cookie: { maxAge: 60000 }}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
