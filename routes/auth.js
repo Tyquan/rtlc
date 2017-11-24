@@ -34,8 +34,9 @@ router.post('/login', (req, res, next) => {
                       expiresIn : 60*60*24 // expires in 24 hours
                     });
                     user.loggedIn = true;
+                    req.session.user = user;
                     res.render('admin/dashboard', {
-                        user,
+                        user: user
                         success: true,
                         message: 'New Token Created',
                         token: token

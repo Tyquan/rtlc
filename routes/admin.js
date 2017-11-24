@@ -11,50 +11,9 @@ var router = express.Router();
 
 // render Dashboard page
 router.get('/dashboard', (req, res, next) => {
-    // let service = Service.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
-    //     if (err) {
-    //         throw err;
-    //     } else {
-    //         console.log(data);
-    //         return data;
-    //     }
-    // });
-    // let blog = Blog.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
-    //     if (err) {
-    //         throw err;
-    //     } else {
-    //         return data;
-    //     }
-    // });
-    // let course = Course.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
-    //     if (err) {
-    //         throw err;
-    //     } else {
-    //         return data;
-    //     }
-    // });
-    // let project = Project.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
-    //     if (err) {
-    //         throw err;
-    //     } else {
-    //         return data;
-    //     }
-    // });
-    // let message = Message.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
-    //     if (err) {
-    //         throw err;
-    //     } else {
-    //         return data;
-    //     }
-    // });
-    // res.render('admin/dashboard', {
-    //     title: 'Admin Dashbard Page',
-    //     service: service,
-    //     blog: blog,
-    //     course: course,
-    //     project: project,
-    //     message: message
-    // });
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Service.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
         if (err) {
             throw err;
@@ -98,6 +57,9 @@ router.get('/dashboard', (req, res, next) => {
 
 /* Users Routes */
 router.get('/allusers', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     User.find({}, (err, data) => {
         if (err) throw err;
         else {
@@ -106,6 +68,9 @@ router.get('/allusers', (req, res, next) => {
     });
 });
 router.get('/showuser/:id', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     User.findById(req.params.id, (err, data) => {
         if (err) {
             throw err;
@@ -117,9 +82,15 @@ router.get('/showuser/:id', (req, res, next) => {
     });
 });
 router.get('/createuser', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     res.render('admin/users/createuser');
 });
 router.post('/createuser', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     var user = new User(req.body);
     user.save((err, data) => {
         if (err) {
@@ -134,6 +105,9 @@ router.post('/createuser', (req, res, next) => {
     Services Routes
 */
 router.get('/allservices', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Service.find({}, (err, data) => {
         if (err) {
             throw err;
@@ -145,9 +119,15 @@ router.get('/allservices', (req, res, next) => {
     });
 });
 router.get('/createservice', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     res.render('admin/services/createservice');
 });
 router.post('/createservice', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     let service = new Service(req.body);
     service.save().then((data) => {
         res.redirect('allservices');
@@ -156,6 +136,9 @@ router.post('/createservice', (req, res, next) => {
     });
 });
 router.get('/showservice/:id', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Service.findById(req.params.id, (err, data) => {
         if (err) {
             throw err;
@@ -171,6 +154,9 @@ router.get('/showservice/:id', (req, res, next) => {
     Blogs Routes
 */
 router.get('/allblogs', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Blog.find({}, (err, data) => {
         if (err) {
             throw err;
@@ -182,9 +168,15 @@ router.get('/allblogs', (req, res, next) => {
     });
 });
 router.get('/createblog', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     res.render('admin/blogs/createblog');
 });
 router.post('/createblog', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     let blog = new Blog(req.body);
     blog.save().then((data) => {
         res.redirect('allblogs');
@@ -193,6 +185,9 @@ router.post('/createblog', (req, res, next) => {
     });
 });
 router.get('/showblog/:id', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Blog.findById(req.params.id, (err, data) => {
         if (err) {
             throw err;
@@ -207,6 +202,9 @@ router.get('/showblog/:id', (req, res, next) => {
 
 /* Course Routes */
 router.get('/allcourses', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Course.find({}, (err, data) => {
         if (err) {
             throw err;
@@ -218,9 +216,15 @@ router.get('/allcourses', (req, res, next) => {
     });
 });
 router.get('/createcourse', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     res.render('admin/courses/createcourse');
 });
 router.post('/createcourse', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     var course = new Course(req.body);
     course.save((err, data) => {
         if (err) {
@@ -231,6 +235,9 @@ router.post('/createcourse', (req, res, next) => {
     });
 });
 router.get('/showcourse/:id', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Course.findById(req.params.id, (err, data) => {
         if (err) {
             throw err;
@@ -244,6 +251,9 @@ router.get('/showcourse/:id', (req, res, next) => {
 
 /* Project Routes */
 router.get('/allprojects', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Project.find({}, (err, data) => {
         if (err) {
             throw err;
@@ -255,9 +265,15 @@ router.get('/allprojects', (req, res, next) => {
     });
 });
 router.get('/createproject', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     res.render('admin/projects/createproject');
 });
 router.post('/createproject', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     var project = new Project(req.body);
     project.save((err, data) => {
         if (err) {
@@ -270,6 +286,9 @@ router.post('/createproject', (req, res, next) => {
 
 /* Message Routes */
 router.get('/incomingmessages', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Message.find({}, (err, messages) => {
         if (err) {
             throw err;
@@ -281,6 +300,9 @@ router.get('/incomingmessages', (req, res, next) => {
     });
 });
 router.get('/showmessage/:id', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Message.findById(req.params.id, (err, data) => {
         if (err) {
             throw err;
@@ -293,6 +315,9 @@ router.get('/showmessage/:id', (req, res, next) => {
 });
 
 router.get('/email/:id', (req, res) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     Message.findById(req.params.id, (err, data) => {
         if (err) {
             throw err;
@@ -306,6 +331,9 @@ router.get('/email/:id', (req, res) => {
 
 // render office page
 router.get('/office', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
     User.find({}, (err, users) => {
         if (err) {
             throw err;
