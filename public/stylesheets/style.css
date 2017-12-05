@@ -6,8 +6,14 @@ body {
   background-image: url(../images/main.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   color: white;
+}
+
+#login-form {
+  background-color: #F2F1EF;
+  padding: 2%;
+  color: #2C3E50;
+  border-radius: 5px;
 }
 
 #adminBg {
