@@ -31,7 +31,7 @@ router.post('/login', (req, res, next) => {
                     console.log('User Found');
                     console.log();
                     req.session.user = user;
-                    res.redirect('admin/dashboard');
+                    res.render('admin/dashboard');
                 }
             }
         }

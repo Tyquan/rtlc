@@ -307,4 +307,7 @@ a {
   #man {
     margin-right: 10px;
   }
+  #textEditor {
+    margin-top: 0px;
+  }
 }
