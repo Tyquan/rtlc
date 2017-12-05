@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
+var session = require('express-session');
 const compression = require('compression');
 const config = require('./config/config'); // get our config file
 
@@ -43,6 +44,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+  secret: 'keysessionsaidding',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {maxAge: 180 * 60 * 1000 }
+}))
 //app.use(session({resave: true, saveUninitialized: true, secret: 'SomeThingCraydyueodbse', cookie: { maxAge: 60000 }}));
 app.use(express.static(path.join(__dirname, 'public')));
 

@@ -28,19 +28,10 @@ router.post('/login', (req, res, next) => {
                     res.json({success: false, message: 'Wrong Password'});
                 } else {
                     // if user is found and password is right
-                    // create a token
                     console.log('User Found');
-                    var token = jwt.sign(user, 'reddictechlearningcenter', {
-                      expiresIn : 60*60*24 // expires in 24 hours
-                    });
-                    user.loggedIn = true;
+                    console.log();
                     req.session.user = user;
-                    res.render('admin/dashboard', {
-                        user: user
-                        success: true,
-                        message: 'New Token Created',
-                        token: token
-                    });
+                    res.redirect('admin/dashboard');
                 }
             }
         }
