@@ -1,0 +1,22 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    include ../nav.pug
+    div(class="container")
+      div(class="row")
+        div(class="col-xs-12")
+          h5 Ty's Art Create Page
+      br
+      form(action="/admin/createartwork" method="POST")
+        label Title
+        input(class="form-control" type="text" name="title")
+        br
+        label Image
+        input(class="form-control" type="file" name="art")
+        br
+        br
+        label Category
+        input(class="form-control" type="text" name="category")
+        br
+        input(class="form-control" type="submit" value="Submit")

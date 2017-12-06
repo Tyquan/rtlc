@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 var session = require('express-session');
 const compression = require('compression');
+const multer = require('multer');
 const config = require('./config/config'); // get our config file
 
 const index = require('./routes/index');
@@ -49,8 +50,13 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: {maxAge: 180 * 60 * 1000 }
-}))
-//app.use(session({resave: true, saveUninitialized: true, secret: 'SomeThingCraydyueodbse', cookie: { maxAge: 60000 }}));
+}));
+// app.use(multer({
+//   dest: './uploads/',
+//   rename: function (fieldname, filename) {
+//     return filename;
+//   },
+// }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
