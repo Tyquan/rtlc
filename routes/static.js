@@ -6,8 +6,21 @@ const Service = require('../models/service');
 const Blog = require('../models/blog');
 const Course = require('../models/course');
 const Project = require('../models/project');
+const Art = require('../models/art');
 
 var router = express.Router();
+
+router.get('/gallery', (req, res, next) => {
+    Art.find({}, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.render('static/gallery', {
+                pieces: data
+            });
+        }
+    });
+});
 
 /*
     Services Routes

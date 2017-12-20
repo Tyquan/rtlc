@@ -7,7 +7,7 @@ const Blog = require('../models/blog');
 var Course = require('../models/course');
 var Project = require('../models/project');
 var Message = require('../models/message');
-//var Art = require('../models/art');
+var Art = require('../models/art');
 var router = express.Router();
 
 // render Dashboard page
@@ -102,35 +102,33 @@ router.post('/createuser', (req, res, next) => {
 /*
     Art Gallery Routes
 */
-// router.get('/allart', (req, res, next) => {
-//     if (!req.session.user) {
-//         return res.status(400).send("You have to be logged in to view this section");
-//     }
-//     Art.find({}, (err, data) => {
-//         if (err) throw err;
-//         else {
-//             res.render('admin/art/allart', { pieces: data });
-//         }
-//     });
-// });
-// router.get('/createartwork', (req, res, next) => {
-//     if (!req.session.user) {
-//         return res.status(400).send("You have to be logged in to view this section");
-//     }
-//     res.render('admin/art/createartwork');
-// });
-// router.post('/createartwork', (req, res, next) => {
-//     var newItem = new Art(req.body);
-//     newItem.img.data = fs.readFileSync(req.files.art.path)
-//     newItem.img.contentType = 'image/png';
-//     newItem.save((err, data) => {
-//         if (err) {
-//             throw err;
-//         } else {
-//             res.redirect('allart');
-//         }
-//     });
-// });
+router.get('/allart', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
+    Art.find({}, (err, data) => {
+        if (err) throw err;
+        else {
+            res.render('admin/art/allart', { pieces: data });
+        }
+    });
+});
+router.get('/createartwork', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    }
+    res.render('admin/art/createartwork');
+});
+router.post('/createartwork', (req, res, next) => {
+    var newItem = new Art(req.body);
+    newItem.save((err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.redirect('allart');
+        }
+    });
+});
 
 /*
     Services Routes

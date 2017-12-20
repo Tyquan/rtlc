@@ -11,4 +11,18 @@ block content
       a(href="/admin/createartwork") Add A New Artwork
       br
       br
-      
+      div("table-responsive")
+        table(class="table table-bordered table-striped table-hover table-condensed")
+          tr
+            th 
+            th Title
+            th Category
+            th Date Created
+          each blog in pieces
+            tr
+              td
+                center
+                  img(src=blog.img width="50px" height="50px")
+              td= blog.title
+              td= blog.category
+              td= blog.date_created
