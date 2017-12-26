@@ -1,6 +1,10 @@
 extends ../layout
 
 block content
+  div(id="servicebody")
+    div(id="splash2")
+      h1(class="text-center") Available Services
+  br
   div(id="marg")
   div(class="container")
     div(class="row")
@@ -13,3 +17,4 @@ block content
               h3(class="text-center" id="text")=service.title
       else
         h1(class="text-center") No Services Added Yet
+  div(id="marg")

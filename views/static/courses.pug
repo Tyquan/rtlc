@@ -1,6 +1,10 @@
 extends ../layout
 
 block content
+  div(id="projectbody")
+    div(id="splash2")
+      h1(class="text-center") Available Courses
+  br
   div(id="marg")
   div(class="container")
     div(class="row")
@@ -23,3 +27,4 @@ block content
               h3(class="text-center" id="text")= course.title
       else
         h1(class="text-center") No Courses Added Yet
+  div(id="marg")

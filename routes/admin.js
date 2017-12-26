@@ -15,45 +15,7 @@ router.get('/dashboard', (req, res, next) => {
     if (!req.session.user) {
         return res.status(400).send("You have to be logged in to view this section");
     }
-    Service.find({}).sort({date_created: -1}).limit(5).exec((err, data)=>{
-        if (err) {
-            throw err;
-        } else {
-            console.log(data);
-            Blog.find({}).sort({date_created: -1}).limit(5).exec((err, blog)=>{
-                if (err) {
-                    throw err;
-                } else {
-                    Course.find({}).sort({date_created: -1}).limit(5).exec((err, course)=>{
-                        if (err) {
-                            throw err;
-                        } else {
-                            Project.find({}).sort({date_created: -1}).limit(5).exec((err, project)=>{
-                                if (err) {
-                                    throw err;
-                                } else {
-                                    Message.find({}).sort({date_created: -1}).limit(5).exec((err, message)=>{
-                                        if (err) {
-                                            throw err;
-                                        } else {
-                                            res.render('admin/dashboard', {
-                                                title: 'Admin Dashbard Page',
-                                                services: data,
-                                                blogs: blog,
-                                                courses: course,
-                                                projects: project,
-                                                messages: message
-                                            });
-                                        }
-                                    });
-                                }
-                            });
-                        }
-                    });
-                }
-            });
-        }
-    });
+    res.render('admin/dashboard');
 });
 
 /* Users Routes */

@@ -1,13 +1,85 @@
 extends layout
 
 block content
-  div(id="container")
-    div(class="row")
-      div(class="col-md-12")
-        div(id="worldy")
-          canvas(id="world")
-            p(class="noCanvas") You need a 
-              a(href="http://www.google.com/chrome") modern browser to view this.
-        div(id="bg-stuff")
-          h1 Turn Your Dreams Into a Reality
-  script(src="/js/home.js")
+  div(id="body")
+    div(id="splash")
+      h1(class="text-center") Turn Your Vision Into A Reality
+      br
+      h1(class="text-center" id="randomWord")
+  br
+  div(class="container")
+    div(id="margy")
+      div(class="row")
+        div(class="col-sm-12")
+          h1(class="text-center") Services
+      div(id="littleMargy")
+        div(class="row")
+          div(class="col-sm-4")
+            center
+              img(src="images/logo.jpg" id="mainImages")
+              div(id="space")
+              h3 Logo Design
+          div(class="col-sm-4")
+            center
+              img(src="images/html5.png" id="mainImages")
+              div(id="space")
+              h3 Web Design
+          div(class="col-sm-4")
+            center
+              img(src="images/js.png" id="mainImages")
+              div(id="space")
+              h3 App Development
+    hr
+    div(id="margy")
+      div(class="row")
+        div(class="col-sm-12")
+          h1(class="text-center") Courses
+      div(id="littleMargy")
+        div(class="row")
+          div(class="col-sm-4")
+            center
+              img(src="images/html5.png" id="main2Images")
+              div(id="space")
+              h3 Html5
+          div(class="col-sm-4")
+            center
+              img(src="images/js.png" id="main2Images")
+              div(id="space")
+              h3 Javascript
+          div(class="col-sm-4")
+            center
+              img(src="images/php.png" id="main2Images")
+              div(id="space")
+              h3 PHP - Mysql
+    hr
+    div(id="margy")
+      div(class="row")
+        div(class="col-sm-12")
+          h1(class="text-center") Meet Tyquan Reddick
+      div(id="littleMargy")
+        div(class="row")
+         div(class="col-sm-4")
+           center
+              img(src="images/profile.jpg" id="main-profile" class="img-thumbnail")
+         div(class="col-sm-8")
+           h3 Certified Javascript, Python and MongDB Developer
+           h3 Adobe Designer
+           h4 Currently Focused on C# Programming, VR/AR and Artificial Intelligence
+           div(id="littleMargy")
+             h2 Connect With Me
+             h1
+                a(href="mailto:tjreddick@gmail.com")
+                  i(class="fa fa-envelope-o" aria-hidden="true") 
+                a(href="http://www.meetup.com/members/154846722/" target="_blank")
+                  i(class="fa fa-users") 
+                a(href="http://www.github.com/Tyquan" target="_blank")
+                  i(class="fa fa-github") 
+                a(href="https://www.linkedin.com/in/tyquanreddick" target="_blank")
+                  i(class="fa fa-linkedin fa-fw") 
+                a(href="http://codepen.io/Tyquan/" target="_blank")
+                  i(class="fa fa-pencil-square-o") 
+                a(href="http://www.freecodecamp.com/tyquan" target="_blank")
+                  i(class="fa fa-trophy")
+                a(href="https://www.youtube.com/channel/UCJlAkRDaMAMS5Mlr3125ZWA")
+                  i(class="fa fa-youtube" aria-hidden="true")
+  script(src="/js/randomword.js")
