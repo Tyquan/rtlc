@@ -43,6 +43,10 @@ a {
 
 /* Mobile View */
 @media screen and (min-width: 320px) {
+  #adminmarg {
+    margin-top: 5%;
+  }
+
   .navbar {
     margin-bottom: 0px;
   }
