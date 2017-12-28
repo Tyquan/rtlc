@@ -24,6 +24,18 @@
     color: white;
   }
 
+  #bt2 {
+    color: white;
+  }
+
+  #bt a {
+    color: white;
+  }
+
+  #bt a:link {
+    color: white;
+  }
+
   #hideMobile {
     visibility: hidden;
   }
