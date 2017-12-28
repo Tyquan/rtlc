@@ -1,14 +1,16 @@
 extends ../layout
 
 block content
+  div(id="servicebody")
+    div(id="splash2")
+      h1(class="text-center")= course.title
   div(id="marg")
-  div(class="container")
-    div(id="content-container")
+    div(id="container")
       if (course)
         div(class="row")
           div(class="col-md-8")
             div(id="courseTitleMargin")
-            h1(class="text-center")= course.title
+            h1(class="text-center" id="hideMobile")= course.title
           div(class="col-md-4")
             center
               img(src=course.imageUrl class="img-fluid")
@@ -31,6 +33,11 @@ block content
             p(id="mems")
               span= course.lessons
                 span  Lessons
+        div(class="row")
+          div(class="col")
+            center
+              button(class="btn btn-primary" id="bt")
+                a(href="/messages/contact") Set Up a Session
       else
         h1(class="text-center") No Courses Added Yet
     br

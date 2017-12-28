@@ -1,7 +1,11 @@
 extends ../layout
 
 block content
-  div(id="adminmarg")
+  div(id="servicebody")
+    div(id="splash2")
+      h1(class="text-center") Contact Me
+  br
+  div(id="marg")
     div(class="container")
       div(class="row")
         div(class="col-md-12")
@@ -14,12 +18,13 @@ block content
                 label First Name*
                 input(class="form-control" type="text" name="firstName")
                 br
+                label Last Name*
+                input(class="form-control" type="text" name="lastName")
+                br
+              div(class="col-sm-6")
                 label Email*
                 input(class="form-control" type="text" name="email")
                 br
-              div(class="col-sm-6")
-                label Last Name*
-                input(class="form-control" type="text" name="lastName")
             label Inquiry*
             select(class="form-control" name="inquiry")
               option(value="") Select...
@@ -33,31 +38,34 @@ block content
             textarea(class="form-control" type="textarea" name="message" placeholder="Please Enter Your Availability and Any Questions/Messages You May Have For Me")
             br
             input(class="form-control" type="submit" value="Submit")
+            br
         div(class="col-md-6")
-          div(class="row")
-            div(class="col-sm-4")
-              img(src="/images/profile.jpg" class="img-fluid")
-            div(class="col-sm-8")
-              h2
-                u Tyquan Reddick
-              h3 Certified Javascript, Python and MongDB Developer
-              h3 Adobe Designer
-              h3
-                a(href="mailto:tjreddick@gmail.com")
-                  i(class="fa fa-envelope-o" aria-hidden="true") 
-                a(href="http://www.meetup.com/members/154846722/" target="_blank")
-                  i(class="fa fa-users") 
-                a(href="http://www.github.com/Tyquan" target="_blank")
-                  i(class="fa fa-github") 
-                a(href="https://www.linkedin.com/in/tyquanreddick" target="_blank")
-                  i(class="fa fa-linkedin fa-fw") 
-                a(href="http://codepen.io/Tyquan/" target="_blank")
-                  i(class="fa fa-pencil-square-o") 
-                a(href="http://www.freecodecamp.com/tyquan" target="_blank")
-                  i(class="fa fa-trophy")
-                a(href="https://www.youtube.com/channel/UCJlAkRDaMAMS5Mlr3125ZWA")
-                  i(class="fa fa-youtube" aria-hidden="true")
-              br
-          div(class="row")
-            div(class="col")
-              iframe(src="https://www.youtube.com/embed/XO6SV0Mup1E" allowfullscreen="" width="100%" height="225" frameborder="0")
+          div(id="littleMargy")
+            div(class="row")
+             div(class="col")
+               center
+                  img(src="/images/profile.jpg" id="main-profile jig" class="img-thumbnail")
+             div(class="col")
+               p(id="jiggy") Certified Javascript, Python and MongDB Developer
+               p(id="jiggy") Adobe Designer
+               p(id="jiggy") Currently Focused on C# Programming, VR/AR and Artificial Intelligence
+            br
+            br
+            div(class="row")
+              div(class="col")
+                h4(class="text-center") Connect With Me
+                h5(class="text-center")
+                  a(href="mailto:tjreddick@gmail.com")
+                    i(class="fa fa-envelope-o" aria-hidden="true") 
+                  a(href="http://www.meetup.com/members/154846722/" target="_blank")
+                    i(class="fa fa-users") 
+                  a(href="http://www.github.com/Tyquan" target="_blank")
+                    i(class="fa fa-github") 
+                  a(href="https://www.linkedin.com/in/tyquanreddick" target="_blank")
+                    i(class="fa fa-linkedin fa-fw") 
+                  a(href="http://codepen.io/Tyquan/" target="_blank")
+                    i(class="fa fa-pencil-square-o") 
+                  a(href="http://www.freecodecamp.com/tyquan" target="_blank")
+                    i(class="fa fa-trophy")
+                  a(href="https://www.youtube.com/channel/UCJlAkRDaMAMS5Mlr3125ZWA")
+                    i(class="fa fa-youtube" aria-hidden="true")

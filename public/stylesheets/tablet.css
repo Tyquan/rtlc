@@ -1,5 +1,28 @@
 /* Tablet View */
 @media screen and (min-width: 760px) {
+
+  #body {
+    margin-top: 7%;
+    height: 645px;
+    padding-top: 0;
+  }
+
+  #mainImages {
+    height: 100px;
+  }
+
+  #margy {
+    margin-top: 15%;
+  }
+
+  #main-profile {
+    height: 300px;
+  }
+
+  #meMain p {
+    font-size: 2.2em;
+  }
+
   #adminmarg {
     margin-top: 50px;
   }

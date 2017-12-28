@@ -9,22 +9,20 @@ block content
   div(class="container")
     div(class="row")
       div(class="col")
-        h2(class="text-center") Private Online Video Training Available!
-        br
-        h4(class="text-center") Thanks to the creators of 
-          a(href="https://www.teamviewer.us/") Teamviewer
-        h4(class="text-center") I now offer video training sessions for all courses provided.
+        h2(class="text-center") Virtual Training Available!
   br
   div(class="container")
     hr
     div(class="row")
       if (courses.length > 0)
         each course in courses
-          div(class="col-md-2")
+          div(class="col")
             a(href="/static/showcourse/" + course.id)
               center
-                img(src=course.imageUrl id="courseImage")
+                img(src=course.imageUrl class="img-fluid")
               h3(class="text-center" id="text")= course.title
       else
         h1(class="text-center") No Courses Added Yet
   div(id="marg")
+  div(id="sniff")
+  script(src='/js/course.js')

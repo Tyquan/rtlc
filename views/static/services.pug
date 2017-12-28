@@ -4,14 +4,13 @@ block content
   div(id="servicebody")
     div(id="splash2")
       h1(class="text-center") Available Services
-  br
   div(id="marg")
   div(class="container")
     div(class="row")
       if (services.length > 0)
         each service in services
-          div(class="col-md-2")
-            a(href="/static/showservice/" + service.id target="_blank")
+          div(class="col")
+            a(href="/static/showservice/" + service.id)
               center
                 img(src=service.imageUrl class="img-fluid")
               h3(class="text-center" id="text")=service.title
