@@ -11,18 +11,18 @@ block content
             h3 Subject: 
               span=user.inquiry
         div(class="row")
-          div(class="col-md-6")
-            h4(id="man")
+          div(class="col-md-12")
+            h3(id="man") Full Name: 
               span(id="man")=user.firstName 
               span(id="man")=user.lastName 
-              span(id="man")
+            h3(id="man") Email: 
                 a(href="#")=user.email
-          div(class="col-md-6")
-            h4
+            h4 Date Recieved
               span=user.date_created
         br
         div(class="row")
           div(class="col-md-12")
+            h3(id="man") Message:
             p=user.message
         br
         div(class="row")
@@ -30,3 +30,4 @@ block content
             a(href="/admin/email/" + user.id) Reply
       else
         h1(class="text-center") No Message Added Yet
+  div(id="marg")

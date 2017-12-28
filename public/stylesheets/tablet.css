@@ -1,0 +1,92 @@
+/* Tablet View */
+@media screen and (min-width: 760px) {
+  #adminmarg {
+    margin-top: 50px;
+  }
+  #bg-stuff {
+    padding-top: 550px;
+    font-size: 1.3em;
+  }
+  #internet {
+    width: 100%;
+    height: 400px;
+  }
+  #courseImage {
+    width: 100%;
+    height: 100px;
+  }
+  #splashLogo {
+    font-family: 'Ultra', serif;
+    padding-left: 15px;
+    font-size: 3em;
+  }
+  #splashHomeButton {
+    font-size: 4em;
+    left: 80%;
+    top: 2%;
+  }
+  #splashHead {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 2em;
+  }
+  #splashImage {
+    width: 90%;
+    height: 400px;
+  }
+  #form-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #adminVideoContainer {
+    visibility: visible;
+  }
+  #callOptions {
+    visibility: visible;
+  }
+  #learning-image {
+    height: 170.767px;
+  }
+  #projectImage {
+    width: 100%;
+    height: 90px;
+  }
+  #text {
+    font-size: 1.5em;
+  }
+  #courseTitleMargin {
+    margin-top: 100px;
+  }
+  #mems {
+    font-size: 1.3em;
+  }
+  #course-stuff {
+    padding-top: 350px;
+    font-size: 1.3em;
+  }
+  #container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .navbar {
+    border: 0px solid black;
+  }
+  #marg {
+    margin-top: 100px;
+  }
+  #messageSent {
+    color: green;
+    font-size: 1.5em;
+    margin-bottom: 2%;
+    padding: 2%;
+    
+  }
+  #man {
+    margin-right: 10px;
+  }
+  #textEditor {
+    margin-top: 0px;
+  }
+}
