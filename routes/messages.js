@@ -28,22 +28,6 @@ router.post('/contactform', (req, res, next) => {
                 messages: data,
                 trunks: 'Message has be successfully sent! I will email you shortly'
             });
-            // const mailOptions = {
-            //   from: 'Tyquan Reddick.us Website', // sender address
-            //   to: 'tjreddick@gmail.com', // list of receivers
-            //   subject: 'New Message From The Website', // Subject line
-            //   html: message
-            // };
-            // transport.sendMail(mailOptions, function (err, info) {
-            //    if(err)
-            //      console.log(err)
-            //    else
-            //     console.log(info);
-            //     res.render('static/contact', {
-            //         messages: data,
-            //         trunks: 'Message has be successfully sent! I will email you shortly'
-            //     });
-            // });
         }
     });
 });

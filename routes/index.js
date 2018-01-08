@@ -1,17 +1,24 @@
-var express = require('express');
-var mongoose = require('mongoose');
-var jwt = require('jsonwebtoken');
-var User = require('../models/user');
-var router = express.Router();
-var Course = require('../models/course');
-var Project = require('../models/project');
+const express = require('express');
+const mongoose = require('mongoose');
+const Blog = require('../models/blog');
+const router = express.Router();
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { 
-      titleMain: 'Tyquan Reddick',
-      titleAbbrev: 'T.R'
-  });
+	Blog.find({}).limit(1).sort({date_created: -1}).exec((err, doc) => {
+		if (err) {
+			console.log(err);
+			throw err;
+		} else {
+			console.log(doc);
+			res.render('index', { 
+			    titleMain: 'Tyquan Reddick',
+			    titleAbbrev: 'T.R',
+			    blog: doc
+			});
+		}
+	});
 });
 
 /* GET signup Page. */

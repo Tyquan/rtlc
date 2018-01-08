@@ -11,6 +11,15 @@
     background-position: center;
   }
 
+  .randomWord {
+    text-align: center;
+    font-size: 5em;
+  }
+
+  .mainText {
+    text-align: center;
+  }
+
   #bt {
     color: white;
     margin-bottom: 10%
@@ -58,6 +67,26 @@
     background-repeat: no-repeat;
     background-position: center;
     color: white;
+  }
+
+  #mainVid {
+    width: 100%;
+    padding-top: 10%;
+    height: 100%;
+    background-image: url(../images/chat.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+
+  #mainVidh1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #iframes {
+    width: 100%;
+    height: 200px;
   }
 
   #meMain {
@@ -281,9 +310,6 @@
     padding-top: 25%;
   }
 
-  #splash h1 {
-    font-size: 5em;
-  }
   #margy {
     margin-top: 20%;
   }

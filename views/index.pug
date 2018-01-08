@@ -3,15 +3,15 @@ extends layout
 block content
   div(id="body")
     div(id="splash")
-      h1(class="text-center") Turn Your Vision Into A Reality
+      h1(class="mainText") Turn Your Vision Into A Reality
       br
-      h1(class="text-center" id="randomWord")
+      h1(id="randomWord" class="randomWord")
   div(id="coursesMain")
     div(class="container")
       div(id="margy")
         div(class="row")
           div(class="col-sm-12")
-            h1(class="text-center") Courses
+            p(id="mainVidh1") Courses
         div(id="littleMargy")
           div(class="row")
             div(class="col")
@@ -44,7 +44,7 @@ block content
       div(id="margy")
         div(class="row")
           div(class="col-sm-12")
-            h1(class="text-center") Services
+            p(id="mainVidh1") Services
         div(id="littleMargy")
           div(class="row")
             div(class="col")
@@ -71,12 +71,35 @@ block content
             div(class="col-sm-12")
               center
                 button(class="btn btn-primary" id="mainButton")
-                  a(href="/static/allservices") More Services I Offer
+                  a(href="/static/allservices") More Services I Offer         
+  div(id="mainVid")
+    div(id="margy" class="container")
+      div(class="row")
+        div(class="col-sm-12")
+          h1(id="mainVidh1") Check Out My Latest Vlog
+      div(id="littleMargy")
+        div(class="row")
+          each blo in blog
+            div(class="col-md-6")
+              center
+                iframe(src=blo.videoUrl id="iframes")
+            div(class="col-md-6")
+              center
+                h1=blo.title
+              div(id="mobileHide")
+                p(id="blogDescription")
+                  span=blo.description
+        div(id="littleMargy")
+          div(class="row")
+            div(class="col")
+              center
+                button(class="btn btn-primary" id="mainButton")
+                  a(href="/static/allblogs") More Videos
   div(id="meMain")
     div(id="margy" class="container")
       div(class="row")
         div(class="col-sm-12")
-          h1(class="text-center") Hi, I'm Tyquan
+          h1(id="mainVidh1") Hi, I'm Tyquan
       div(id="littleMargy")
         div(class="row")
          div(class="col")

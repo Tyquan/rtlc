@@ -18,6 +18,30 @@
     margin-top: -222px;
   }
 
+  #mainVidh1 {
+    font-size: 50px;
+  }
+
+  #mobileHide {
+    visibility: visible;
+  }
+
+  #iframes {
+    height: 300px;
+  }
+
+  #blogDescription {
+    font-size: 2em;
+  }
+
+  .randomWord {
+    font-size: 9em;
+  }
+
+  .mainText {
+    font-size: 5em;
+  }
+
 
   #projectImage {
       width: 100%;
@@ -46,10 +70,6 @@
 
   #splash {
     padding-top: 15%;
-  }
-
-  #splash h1 {
-    font-size: 5em;
   }
 
   #splash2 {
