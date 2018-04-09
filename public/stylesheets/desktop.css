@@ -1,0 +1,161 @@
+/* Desktop View */
+@media screen and (min-width: 996px) {
+  #body {
+    width: 100%;
+    margin-top: 4%;
+    height: 645px;
+    background-image: url(../images/mac.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #mainContact {
+    width: 150px;
+    height: 75px;
+    background-color: #d63031;
+    padding-top: 1.5%;
+    border-radius: 5%;
+  }
+
+  #servicesMain {
+    width: 100%;
+    height: 900px;
+    background-image: url(../images/mac.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -222px;
+  }
+
+  #mainVidh1 {
+    font-size: 50px;
+  }
+
+  #mainVidh2 {
+    font-size: 25px;
+  }
+
+  #mobileHide {
+    visibility: visible;
+  }
+
+  #iframes {
+    height: 300px;
+  }
+
+  #blogDescription {
+    font-size: 2em;
+  }
+
+  .randomWord {
+    font-size: 7em;
+  }
+
+  .mainText {
+    font-size: 5em;
+  }
+
+
+  #projectImage {
+      width: 100%;
+      height: 120px;
+  }
+
+  #jig {
+    width: 100%;
+  }
+
+  #jiggy {
+    font-size: 1.5em;
+  }
+
+  #hideMobile {
+    visibility: visible;
+  }
+
+  #projectbody {
+    height: 300px;
+  }
+
+  #servicebody {
+    height: 300px;
+  }
+
+  #splash {
+    padding-top: 10%;
+  }
+
+  #splash2 {
+    padding-top: 10%;
+    color: white
+  }
+
+  #splash2 h1 {
+    padding-top: 0%;
+    font-size: 5em;
+  }
+
+  #margy {
+    margin-top: -10%;
+    padding-top: 10%;
+  }
+
+  #coursesMain {
+    height: 900px;
+  }
+
+  #roi {
+    height: 900px;
+    width: 100%;
+    background-image: url(../images/goals.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: -222px;
+    color: whitesmoke;
+  }
+
+  #workTogether {
+    height: 600px;
+    width: 100%;
+    background-image: url(../images/collab.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: -222px;
+    color: whitesmoke;
+  }
+  #collabImage {
+    height: 350px;
+    width: 100%''
+  }
+  #workMarg {
+    padding-top: 10%;
+  }
+
+  #littleMargy {
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+  #mainImages {
+    height: 150px;
+  }
+
+  #main2Images {
+    width: 100%;
+    height: 200px;
+  }
+
+  #space {
+    margin-top: 5%;
+  }
+
+  #main-profile {
+    width: 100%;
+    height: 300px;
+  }
+  #serviceImage {
+    width: 100%;
+    height: 150px;
+  }
+}

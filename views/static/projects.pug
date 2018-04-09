@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  div(id="projectbody")
+    div(id="splash2")
+      h1(class="text-center") My Past Projects
+  br
+  div(id="marg")
+  div(class="container")
+    div(class="row")
+      if (projects.length > 0)
+        each project in projects
+          div(class="col col-md-2")
+            a(href=project.linkUrl target="_blank")
+              center
+                img(src=project.imageUrl id="projectImage")
+              h3(class="text-center" id="text")= project.title
+      else
+        h1(class="text-center") No Projects Added Yet
+  div(id="marg")

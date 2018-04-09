@@ -1,0 +1,366 @@
+/* Mobile View */
+@media screen and (min-width: 320px) {
+
+  #body {
+    width: 100%;
+    padding-top: 10%;
+    margin-top: 15%;
+    height: 620px;
+    background-image: url(../images/mac.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .randomWord {
+    text-align: center;
+    font-size: 5em;
+  }
+
+  .mainText {
+    text-align: center;
+  }
+
+  #bt {
+    color: white;
+    margin-bottom: 10%
+  }
+
+  #bt a {
+    color: white;
+  }
+
+  #bt a:link {
+    color: white;
+  }
+
+  #bt2 {
+    color: white;
+  }
+
+  #bt a {
+    color: white;
+  }
+
+  #bt a:link {
+    color: white;
+  }
+
+  #hideMobile {
+    visibility: hidden;
+  }
+
+  #coursesMain {
+    width: 100%;
+    padding-top: 10%;
+    height: 100%;
+    background-image: url(../images/chat.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+
+  #servicesMain {
+    width: 100%;
+    padding-top: 10%;
+    height: 100%;
+    background-image: url(../images/web.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+
+  #mainVid {
+    width: 100%;
+    padding-top: 10%;
+    height: 100%;
+    background-image: url(../images/chat.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+
+  #mainVidh1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #iframes {
+    width: 100%;
+    height: 200px;
+  }
+
+  #meMain {
+    width: 100%;
+    padding-top: 10%;
+    height: 100%;
+    background-image: url(../images/main.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+
+  #meMain h1 {
+    font-size: 3.2em;
+  }
+
+  #meMain p {
+    font-size: 1.2em;
+  }
+
+  #meMain i {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  #mainButton a {
+    color: white;
+  }
+  #mainButton a:link {
+    color: white;
+  }
+
+  #adminmarg {
+    padding-top: 5%;
+  }
+
+  .navbar {
+    margin-bottom: 0px;
+  }
+  #logo {
+    font-family: 'Philosopher', sans-serif;
+  }
+  #main-bg {
+    width: 100%;
+    height: 600px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #bg-stuff {
+    color: white;
+    padding-top: 350px;
+    padding-left: 2%;
+    width: 70%;
+    float: left;
+  }
+  #courseImage {
+    width: 100%;
+    height: 50px;
+  }
+
+  #courseImage2 {
+    width: 100%;
+    height: 150px;
+  }
+
+  #nav {
+    color: black;
+    width: 100%;
+  }
+  #nav a {
+    color: black;
+  }
+  #form-container {
+    width: 100%;
+  }
+  #splashContent {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    color: #2980b9;
+    margin: 0;
+    padding: 0;
+  }
+  #splashDiv {
+    padding-top: 15px;
+  }
+  #splashLogo {
+    font-family: 'Ultra', serif;
+    padding-left: 15px;
+    font-size: 1.5em;
+  }
+  #splashHomeButton {
+    font-size: 2em;
+    left: 80%;
+    top: 2%;
+    z-index: 900;
+    position: absolute;
+  }
+  #splashHomeButton a {
+    color: #c0392b;
+  }
+  #splashHomeButton a:hover {
+    color: #27ae60;
+  }
+  #splashHead {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+  }
+  #splashImage {
+    width: 100%;
+  }
+  #learning-image {
+    width: 100%;
+  }
+  #projectImage {
+    width: 100%;
+    height: 100%;
+  }
+  #adminVideoContainer {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+  }
+  #callOptions {
+    width: 100%;
+    height: 50px;
+    visibility: hidden;
+  }
+  #textEditor {
+    margin-top: -500px;
+    width: 100%;
+    height: 100%;
+  }
+  #startButton {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    color: white;
+  }
+  #recordButton {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    color: white;
+  }
+  .wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
+  }
+  .button {
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 4px;
+    display: inline-block;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    height: 80px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    margin: 5px;
+    overflow: hidden;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+    width: 100%;
+  }
+  .roll-text {
+    display: block;
+    position: relative;
+    transition: all 420ms cubic-bezier(.175,.885,.32,1.275);
+    margin-top: 20px;
+  }
+  #content-container {
+    padding: 1%;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+  }
+  #text {
+    font-size: 1.1em;
+  }
+  #container {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  #courseBg {
+    width: 100%;
+    height: 400px;
+    background-image: url('../images/comp.png');
+    background-position: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #course-stuff {
+    color: white;
+    padding-top: 300px;
+    padding-left: 2%;
+    width: 70%;
+    float: left;
+  }
+  #marg {
+    margin-top: 100px;
+  }
+
+
+  #splash {
+    padding-top: 25%;
+  }
+
+  #margy {
+    margin-top: 20%;
+  }
+
+  #littleMargy {
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
+
+  #mainImages {
+    width: 80%;
+    height: 50px;
+  }
+
+  #main2Images {
+    width: 100%;
+    height: 200px;
+  }
+
+  #space {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  #main-profile {
+    width: 100%;
+    height: 200px;
+  }
+
+  #servicebody {
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/mac.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #projectbody {
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/chat.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #splash2 h1 {
+    padding-top: 25%;
+    color: white;
+  }
+
+  #mobileHide {
+    visibility: hidden;
+  }
+}

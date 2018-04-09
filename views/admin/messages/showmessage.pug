@@ -1,0 +1,33 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    include ../nav.pug
+    div(id="marg")
+    div(class="container")
+      if (user)
+        div(class="row")
+          div(class="col-md-12")
+            h3 Subject: 
+              span=user.inquiry
+        div(class="row")
+          div(class="col-md-12")
+            h3(id="man") Full Name: 
+              span(id="man")=user.firstName 
+              span(id="man")=user.lastName 
+            h3(id="man") Email: 
+                a(href="#")=user.email
+            h4 Date Recieved
+              span=user.date_created
+        br
+        div(class="row")
+          div(class="col-md-12")
+            h3(id="man") Message:
+            p=user.message
+        br
+        div(class="row")
+          div(class="col-md-12")
+            a(href="/admin/email/" + user.id) Reply
+      else
+        h1(class="text-center") No Message Added Yet
+  div(id="marg")

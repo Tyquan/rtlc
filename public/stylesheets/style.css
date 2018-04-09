@@ -1,0 +1,60 @@
+/* Globals */
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+  font-family: 'Libre Baskerville', serif;
+}
+#splash {
+  color: white;
+}
+
+footer {
+  background-color: #34495E;
+  color: white;
+  padding-top: 3%;
+}
+
+#logo2 {
+  color: white;
+}
+
+#login-form {
+  background-color: #F2F1EF;
+  padding: 2%;
+  color: #2C3E50;
+  border-radius: 5px;
+}
+
+#adminBg {
+  background-color: white;
+  color: black;
+  margin: 1%;
+  font-size: 1.5em;
+  padding-top: 5%;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+#odd {
+  background-color: #95a5a6;
+  color: #ecf0f1;
+}
+
+#mainContact {
+  color: white;
+}
+
+#mainContact a {
+  color: white;
+  text-decoration: none;
+}
+
+#mainContact a:hover {
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,38 @@
+extends ../layout
+
+block content
+  div(id="servicebody")
+    div(id="splash2")
+      h1(class="text-center")= service.title
+  div(id="marg")
+    div(class="container")
+      if (service)
+        div(class="row")
+          div(class="col-md-6")
+            div(id="courseTitleMargin")
+            h1(class="text-center" id="hideMobile")= service.title
+          div(class="col-md-6")
+            center
+              img(src=service.imageUrl class="img-fluid")
+        hr
+        div(class="row")
+          div(class="col-md-8")
+            h3 Description:
+            p(id="mems")
+              span= service.description
+            br
+          div(class="col-md-4")
+            h3 Price:
+            p(id="mems")
+              span $
+              span= service.price
+            h3 Category:
+            p(id="mems")
+              span= service.category
+        div(class="row")
+            div(class="col")
+              center
+                button(class="btn btn-primary" id="bt")
+                  a(href="/messages/contact") Lets Create Your Vision
+      else
+        h1(class="text-center") No Services Added Yet

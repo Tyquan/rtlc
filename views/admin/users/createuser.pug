@@ -1,0 +1,34 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    include ../nav.pug
+    div(class="container")
+      div(class="row")
+        div(class="col-xs-12")
+          h5 Ty's Contact Create Page
+      br
+      form(action="/admin/createuser" method="POST")
+        label Email
+        input(class="form-control" type="email" name="username")
+        br
+        label Name
+        input(class="form-control" type="text" name="name")
+        br
+        label Role
+        input(class="form-control" type="text" name="role")
+        br
+        label City
+        input(class="form-control" type="text" name="city")
+        br
+        label State
+        input(class="form-control" type="text" name="state")
+        br
+        label Phone Number
+        input(class="form-control" type="text" name="phone")
+        br
+        label Password
+        input(class="form-control" type="text" name="password")
+        br
+        input(class="form-control" type="submit" value="Submit")
+  div(id="marg")

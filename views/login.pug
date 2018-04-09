@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  div(id="marg")
+    div(class="container")
+      div(class="row")
+        div(class="col-md-3")
+        div(class="col-md-6")
+          div(id="login-form")
+            h1(class="text-center") login
+            br
+            form(action="/auth/login", method="post" class="form")
+                div(class="form-group")
+                    label Email
+                    input(type="email", name="username" class="form-control")
+                    br
+                div(class="form-group")
+                    label Password
+                    input(type="password", name="password" class="form-control")
+                    br
+                div(class="form-group")
+                    input(type="submit", value="Submit" class="btn btn-primary")
+        div(class="col-md-3")
+  div(id="marg")

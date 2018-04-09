@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  div(id="servicebody")
+    div(id="splash2")
+      h1(class="text-center") My Videos
+  br
+  div(id="marg")
+  div(class="container")
+    div(class="row")
+      if (blogs.length > 0)
+        each blog in blogs
+          div(class="col col-md-2")
+            a(href="/static/showblog/" + blog.id)
+              center
+                img(src=blog.imageUrl class="img-fluid")
+              h3(class="text-center" id="text")=blog.title
+      else
+        h1(class="text-center") No Blogs Added Yet
+  div(id="marg")

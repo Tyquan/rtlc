@@ -1,0 +1,26 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    include ../nav.pug
+    div(id="marg")
+    div(class="container")
+      if (user)
+        div(class="row")
+          div(class="col-md-6")
+            h1 Name: 
+              small=user.name
+            h1 Role: 
+              small=user.role
+            h1 City: 
+              small=user.city
+          div(class="col-md-6")
+            h1 Username: 
+              small=user.username
+            h1 Phone Number: 
+              small=user.phone
+            h1 State: 
+              small=user.state
+      else
+        h1(class="text-center") No Courses Added Yet
+  div(id="marg")

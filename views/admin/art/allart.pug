@@ -1,0 +1,29 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    include ../nav.pug
+    div(class="container")
+      div(class="row")
+        div(class="col-xs-12")
+          h1(class="text-center") Art
+      br
+      a(href="/admin/createartwork") Add A New Artwork
+      br
+      br
+      div("table-responsive")
+        table(class="table table-bordered table-striped table-hover table-condensed")
+          tr
+            th 
+            th Title
+            th Category
+            th Date Created
+          each blog in pieces
+            tr
+              td
+                center
+                  img(src=blog.img width="50px" height="50px")
+              td= blog.title
+              td= blog.category
+              td= blog.date_created
+  div(id="marg")

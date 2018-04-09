@@ -1,0 +1,30 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    include ../nav.pug
+    div(id="content-container")
+      div(id="container")
+        if (course)
+          div(class="row")
+            div(class="col-md-12")
+              form(action="/updatecourse/" + course._id method="PUT")
+                label Title
+                input(placeholder=course.title name=course.title class="form-control")
+                br
+                label Image URL
+                input(placeholder=course.imageUrl name=course.imageUrl class="form-control")
+                br
+                label Description
+                textarea(placeholder=course.description name=course.description class="form-control")
+                br
+                label Prerequisites
+                textarea(placeholder=course.prerequisites name=course.prerequisites class="form-control")
+                br
+                label Lessons
+                textarea(placeholder=course.lessons name=course.lessons class="form-control")
+                br
+                input(class="form-control" type="submit" value="Submit")
+        else
+          h1(class="text-center") No Courses Added Yet
+  div(id="marg")

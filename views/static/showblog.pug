@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+  div(id="servicebody")
+    div(id="splash2")
+      h1(class="text-center") Video Blog
+  br
+  div(id="marg")
+    div(id="container")
+      if (blog)
+        div(class="row")
+          div(class="col-md-12")
+            h1(class="text-center")= blog.title
+            p(class="text-center")
+              span= blog.date_created
+            hr
+        div(class="row")
+          div(class="col-md-6")
+            center
+              img(src=blog.imageUrl class="img-fluid")
+            br
+            div
+              p(id="blogDescription")
+                span= blog.description
+            br
+            h4 Category:
+            p(id="blogDescription")
+              span= blog.category
+            br
+          div(class="col-md-6")
+            iframe(src=blog.videoUrl width="100%" height="400px")
+      else
+        h1(class="text-center") No Blogs Added Yet
