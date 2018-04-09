@@ -37,16 +37,12 @@ footer {
 
 a {
   color: #00B7FF;
-<<<<<<< HEAD
   text-decoration: none;
-=======
->>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
 }
 
 #odd {
   background-color: #95a5a6;
   color: #ecf0f1;
-<<<<<<< HEAD
 }
 
 #mainContact {
@@ -61,6 +57,4 @@ a {
 #mainContact a:hover {
   color: white;
   text-decoration: none;
-=======
->>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
 }
