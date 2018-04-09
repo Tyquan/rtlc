@@ -1,5 +1,6 @@
 function getRandomQoute() {
 	var qoutes = [
+<<<<<<< HEAD
 		"Strategy & Consulting",
 		"Website Development",
 		"App Development",
@@ -16,6 +17,27 @@ function getRandomQoute() {
 		"Search Engine Optimization",
 		"Content Marketing"
 
+=======
+		"Learn HTML5", 
+		"Learn Javascript", 
+		"Build A Website", 
+		"Learn PHP", 
+		"Learn Nodejs", 
+		"Learn Mongodb", 
+		"Learn Agularjs", 
+		"Learn MYSQL", 
+		"Learn Python", 
+		"Build an App", 
+		"Virtual Training", 
+		"Skype Avaiable", 
+		"Ecommerce Development", 
+		"Custom Applications",
+		"Learn ES6", 
+		"Learn Jquery", 
+		"Learn CSS3",
+		"I Build Websites",
+		"I Build Apps"
+>>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
 	];
 	var randomNumber = Math.floor(Math.random() * (qoutes.length));
 	var random = qoutes[randomNumber];

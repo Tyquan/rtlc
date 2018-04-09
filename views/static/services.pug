@@ -3,17 +3,28 @@ extends ../layout
 block content
   div(id="servicebody")
     div(id="splash2")
+<<<<<<< HEAD
       h1(class="text-center") Marketing & Branding Services
+=======
+      h1(class="text-center") Available Services
+>>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
   div(id="marg")
   div(class="container")
     div(class="row")
       if (services.length > 0)
         each service in services
+<<<<<<< HEAD
 
           div(class="col-md-3")
             a(href="/static/showservice/" + service.id)
               center
                 img(src=service.imageUrl id="serviceImage")
+=======
+          div(class="col")
+            a(href="/static/showservice/" + service.id)
+              center
+                img(src=service.imageUrl class="img-fluid")
+>>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
               h3(class="text-center" id="text")=service.title
       else
         h1(class="text-center") No Services Added Yet

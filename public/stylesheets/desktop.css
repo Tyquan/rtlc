@@ -9,6 +9,7 @@
     background-position: center;
   }
 
+<<<<<<< HEAD
   #mainContact {
     width: 150px;
     height: 75px;
@@ -20,6 +21,11 @@
   #servicesMain {
     width: 100%;
     height: 900px;
+=======
+  #servicesMain {
+    width: 100%;
+    height: 735px;
+>>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
     background-image: url(../images/mac.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -30,10 +36,13 @@
     font-size: 50px;
   }
 
+<<<<<<< HEAD
   #mainVidh2 {
     font-size: 25px;
   }
 
+=======
+>>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
   #mobileHide {
     visibility: visible;
   }
@@ -47,7 +56,11 @@
   }
 
   .randomWord {
+<<<<<<< HEAD
     font-size: 7em;
+=======
+    font-size: 9em;
+>>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
   }
 
   .mainText {
@@ -81,7 +94,11 @@
   }
 
   #splash {
+<<<<<<< HEAD
     padding-top: 10%;
+=======
+    padding-top: 15%;
+>>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
   }
 
   #splash2 {
@@ -103,6 +120,7 @@
     height: 900px;
   }
 
+<<<<<<< HEAD
   #roi {
     height: 900px;
     width: 100%;
@@ -132,6 +150,8 @@
     padding-top: 10%;
   }
 
+=======
+>>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
   #littleMargy {
     margin-top: 10%;
     margin-bottom: 5%;
@@ -151,6 +171,7 @@
   }
 
   #main-profile {
+<<<<<<< HEAD
     width: 100%;
     height: 300px;
   }
@@ -158,4 +179,9 @@
     width: 100%;
     height: 150px;
   }
+=======
+    width: 50%;
+    height: 300px;
+  }
+>>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
 }
