@@ -1,7 +1,11 @@
 {
-    "name": "workspace",
-    "version": "0.0.0",
+    "name": "rtlc",
+    "version": "1.0.0",
     "private": true,
+    "engines": {
+        "node": "9.8.0",
+        "yarn": "1.5.1"
+    },
     "scripts": {
         "start": "nodemon ./bin/www"
     },
