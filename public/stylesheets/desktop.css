@@ -19,10 +19,6 @@
   #servicesMain {
     width: 100%;
     height: 900px;
-  }
-  #servicesMain {
-    width: 100%;
-    height: 735px;
     background-image: url(../images/mac.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -84,7 +80,6 @@
 
   #splash {
     padding-top: 10%;
-    padding-top: 15%;
   }
 
   #splash2 {
@@ -158,7 +153,5 @@
   #serviceImage {
     width: 100%;
     height: 150px;
-    width: 50%;
-    height: 300px;
   }
 }

@@ -3,11 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-<<<<<<< HEAD
         "start": "nodemon ./bin/www"
-=======
-        "start": "node ./bin/www"
->>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
     },
     "dependencies": {
         "body-parser": "~1.17.1",
@@ -21,10 +17,7 @@
         "morgan": "~1.8.1",
         "multer": "^1.3.0",
         "nodemailer": "^4.3.1",
-<<<<<<< HEAD
         "nodemon": "^1.17.3",
-=======
->>>>>>> eb542255924448ec6061cbfd44e5e2997134ad91
         "pug": "~2.0.0-beta11",
         "request": "^2.81.0",
         "serve-favicon": "~2.4.2",

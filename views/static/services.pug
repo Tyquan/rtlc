@@ -4,7 +4,6 @@ block content
   div(id="servicebody")
     div(id="splash2")
       h1(class="text-center") Marketing & Branding Services
-      h1(class="text-center") Available Services
   div(id="marg")
   div(class="container")
     div(class="row")
@@ -14,11 +13,7 @@ block content
             a(href="/static/showservice/" + service.id)
               center
                 img(src=service.imageUrl id="serviceImage")
-          div(class="col")
-            a(href="/static/showservice/" + service.id)
-              center
-                img(src=service.imageUrl class="img-fluid")
-              h3(class="text-center" id="text")=service.title
+                h3(class="text-center" id="text")=service.title
       else
         h1(class="text-center") No Services Added Yet
   div(id="marg")
