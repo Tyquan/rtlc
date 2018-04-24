@@ -4,7 +4,7 @@
   #body {
     width: 100%;
     padding-top: 10%;
-    height: 620px;
+    height: 720px;
     background-image: url(../images/mac.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -14,7 +14,7 @@
     width: 150px;
     height: 75px;
     background-color: #d63031;
-    padding-top: 5%;
+    padding-top: 2.5%;
     border-radius: 5%;
   }
 
@@ -336,6 +336,10 @@
     height: 200px;
   }
 
+  #mainVidh2 {
+    font-size: 1.5em;
+  }
+
   #space {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -372,7 +376,7 @@
   }
 
   #roi {
-    height: 400px;
+    height: 500px;
     width: 100%;
     background-image: url(../images/goals.jpg);
     background-repeat: no-repeat;
