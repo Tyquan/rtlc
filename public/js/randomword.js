@@ -17,13 +17,10 @@ function getRandomQoute() {
 		"Content Marketing",
 		"Learn HTML5",
 		"Learn CSS3", 
-		"Learn Javascript", 
-		"Build A Website",
-		"Build an App", 
+		"Learn Javascript",
 		"Virtual Training", 
 		"Skype Avaiable", 
-		"Ecommerce Development", 
-		"Custom Applications"
+		"Ecommerce Development"
 	];
 	var randomNumber = Math.floor(Math.random() * (qoutes.length));
 	var random = qoutes[randomNumber];
@@ -60,4 +57,4 @@ function getRandomColor(){
 setInterval(function(){ 
 	getRandomQoute();
 	getRandomColor();
-}, 1000);
+}, 1500);
