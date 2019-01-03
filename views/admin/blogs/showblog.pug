@@ -2,9 +2,10 @@ extends ../../layout
 
 block content
   div(id="adminBg")
-    include ../nav.pug
-    div(id="content-container")
-      div(id="container")
+    div(class="row")
+      div(class="col-md-2")
+        include ../nav.pug
+      div(class="col-md-10")
         if (blog)
           div(class="row")
             div(class="col-md-12")

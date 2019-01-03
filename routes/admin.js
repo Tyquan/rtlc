@@ -320,18 +320,4 @@ router.get('/email/:id', (req, res) => {
     });
 });
 
-// render office page
-router.get('/office', (req, res, next) => {
-    if (!req.session.user) {
-        return res.status(400).send("You have to be logged in to view this section");
-    }
-    User.find({}, (err, users) => {
-        if (err) {
-            throw err;
-        } else {
-            res.render('admin/office', { users: users });
-        }
-    });
-});
-
 module.exports = router;

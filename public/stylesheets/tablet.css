@@ -1,12 +1,6 @@
 /* Tablet View */
 @media screen and (min-width: 760px) {
-
-  #body {
-    margin-top: 7%;
-    height: 745px;
-    padding-top: 0;
-  }
-
+  /*
   #mainImages {
     height: 100px;
   }
@@ -112,4 +106,5 @@
   #textEditor {
     margin-top: 0px;
   }
+  */
 }

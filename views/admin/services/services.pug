@@ -2,26 +2,26 @@ extends ../../layout
 
 block content
   div(id="adminBg")
-    include ../nav.pug
-    div(class="container")
-      div(class="row")
-        div(class="col-xs-12")
-          h1(class="text-center") Services
-      br
-      a(href="/admin/createservice") Create A Service
-      br
-      br
-      div("table-responsive")
-        table(class="table table-bordered table-striped table-hover table-condensed")
-          tr
-            th Title
-            th Price
-            th Category
-          each service in services
+    div(class="row")
+      div(class="col-md-2")
+        include ../nav.pug
+      div(class="col-md-10")
+        h1(class="text-center") Services
+        br
+        a(href="/admin/createservice") Create A Service
+        br
+        br
+        div("table-responsive")
+          table(class="table table-bordered table-striped table-hover table-condensed")
             tr
-              td
-                a(href="/admin/showservice/" + service.id)= service.title
-              td $
-                span= service.price
-              td= service.category
+              th Title
+              th Price
+              th Category
+            each service in services
+              tr
+                td
+                  a(href="/admin/showservice/" + service.id)= service.title
+                td $
+                  span= service.price
+                td= service.category
   div(id="marg")

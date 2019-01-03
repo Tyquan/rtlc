@@ -1,13 +1,6 @@
 /* Desktop View */
 @media screen and (min-width: 996px) {
-  #body {
-    width: 100%;
-    margin-top: 4%;
-    height: 645px;
-    background-image: url(../images/mac.png);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  /*
   #mainContact {
     width: 150px;
     height: 75px;
@@ -158,4 +151,5 @@
   #mems {
     font-size: 1.7em;
   }
+  */
 }

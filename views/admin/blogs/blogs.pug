@@ -2,25 +2,25 @@ extends ../../layout
 
 block content
   div(id="adminBg")
-    include ../nav.pug
-    div(class="container")
-      div(class="row")
-        div(class="col-xs-12")
-          h1(class="text-center") Vlogs
-      br
-      a(href="/admin/createblog") Add A New Video
-      br
-      br
-      div("table-responsive")
-        table(class="table table-bordered table-striped table-hover table-condensed")
-          tr
-            th Title
-            th Category
-            th Date Created
-          each blog in blogs
+    div(class="row")
+      div(class="col-md-2")
+        include ../nav.pug
+      div(class="col-md-10")
+        h1(class="text-center") Vlogs
+        br
+        a(href="/admin/createblog") Add A New Video
+        br
+        br
+        div("table-responsive")
+          table(class="table table-bordered table-striped table-hover table-condensed")
             tr
-              td
-                a(href="/admin/showblog/" + blog.id)= blog.title
-              td= blog.category
-              td= blog.date_created
+              th Title
+              th Category
+              th Date Created
+            each blog in blogs
+              tr
+                td
+                  a(href="/admin/showblog/" + blog.id)= blog.title
+                td= blog.category
+                td= blog.date_created
   div(id="marg")
