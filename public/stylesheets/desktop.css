@@ -8,6 +8,10 @@
     border-radius: 5%;
   }
 
+  #mainContact h5 {
+    margin-top: 5%;
+  }
+
   #servicesMain {
     width: 100%;
     height: 900px;

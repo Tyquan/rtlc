@@ -11,6 +11,10 @@
     background-size: cover;
   }
 
+  #mainContact h5 {
+    margin-top: 10%;
+  }
+
   #fixed {
     position: fixed;
     bottom: 0;
