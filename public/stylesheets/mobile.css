@@ -1,5 +1,5 @@
 /* Mobile View */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 200px) {
 
   #body {
     width: 100%;
