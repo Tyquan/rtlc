@@ -1,6 +1,5 @@
 function getRandomQoute() {
 	var qoutes = [
-		"Strategy & Consulting",
 		"Website Development",
 		"App Development",
 		"Digital Marketing",
@@ -13,14 +12,10 @@ function getRandomQoute() {
 		"Logo Design",
 		"Email Marketing",
 		"Marketing Strategy",
-		"Search Engine Optimization",
+		"SEO",
 		"Content Marketing",
-		"Learn HTML5",
-		"Learn CSS3", 
-		"Learn Javascript",
-		"Virtual Training", 
-		"Skype Avaiable", 
-		"Ecommerce Development"
+		"Virtual Training",
+		"Ecommerce"
 	];
 	var randomNumber = Math.floor(Math.random() * (qoutes.length));
 	var random = qoutes[randomNumber];
