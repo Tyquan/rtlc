@@ -14,31 +14,38 @@ block content
         div(class="col-md-6")
           form(action="/messages/contactform" method="POST")
             div(class="row")
-              div(class="col-sm-6")
+              div(id="col-md-6")
                 label First Name*
                 input(class="form-control" type="text" name="firstName")
                 br
+              div(id="col-md-6")
                 label Last Name*
                 input(class="form-control" type="text" name="lastName")
                 br
-              div(class="col-sm-6")
+            div(class="row")
+              div(id="col-md-6")
                 label Email*
                 input(class="form-control" type="text" name="email")
                 br
-            label Inquiry*
-            select(class="form-control" name="inquiry")
-              option(value="") Select...
-              option(value="training") I would like to learn
-              option(value="website") I would like a website built
-              option(value="app") I would like an app built
-              option(value="graphics") I would like a graphic to be made
-              option(value="question") I have a question
-            br
-            label Message*
-            textarea(class="form-control" type="textarea" name="message" placeholder="Please Enter Your Availability and Any Questions/Messages You May Have For Me")
-            br
-            input(class="form-control" type="submit" value="Submit")
-            br
+              div(id="col-md-6")
+                label Inquiry*
+                select(class="form-control" name="inquiry")
+                  option(value="") Select...
+                  option(value="training") I would like to learn
+                  option(value="branding") I would like to build my brand
+                  option(value="website") I would like a website built
+                  option(value="app") I would like an app built
+                  option(value="graphics") I would like a graphic made
+                  option(value="question") I have a question
+                  option(value="talk") I would like to sit down and talk
+                  option(value="other") Other...
+            div(class="row")
+              div(class="col-md-12")
+                label Message*
+                textarea(class="form-control" type="textarea" name="message" placeholder="Please Enter Your Availability and Any Questions/Messages You May Have For Me")
+                br
+                input(class="form-control" type="submit" value="Submit")
+          br
         div(class="col-md-6")
           div(id="littleMargy")
             div(class="row")
@@ -46,25 +53,39 @@ block content
                center
                   img(src="/images/profile.jpg" id="main-profile jig" class="img-thumbnail")
              div(class="col")
-               p(id="jiggy") Certified Javascript, Python and MongDB Developer
-               p(id="jiggy") Adobe Designer
+               p() Certified Javascript, Python and MongDB Developer
+               p() Adobe Designer
             br
             br
             div(class="row")
               div(class="col")
                 h4(class="text-center") Connect With Me
-                h5(class="text-center")
+            div(class="row")
+              div(id="col-lg-2")
+                h5(class="text-center" id="social")
                   a(href="mailto:tjreddick@gmail.com")
                     i(class="fa fa-envelope-o" aria-hidden="true") 
+              div(id="col-lg-2")
+                h5(class="text-center" id="social")
                   a(href="http://www.meetup.com/members/154846722/" target="_blank")
                     i(class="fa fa-users") 
+              div(id="col-lg-2")
+                h5(class="text-center" id="social")
                   a(href="http://www.github.com/Tyquan" target="_blank")
-                    i(class="fa fa-github") 
+                    i(class="fa fa-github")
+              div(id="col-lg-2")
+                h5(class="text-center" id="social") 
                   a(href="https://www.linkedin.com/in/tyquanreddick" target="_blank")
-                    i(class="fa fa-linkedin fa-fw") 
+                    i(class="fa fa-linkedin fa-fw")
+              div(id="col-lg-2")
+                h5(class="text-center" id="social")
                   a(href="http://codepen.io/Tyquan/" target="_blank")
-                    i(class="fa fa-pencil-square-o") 
+                    i(class="fa fa-pencil-square-o")
+              div(id="col-lg-2")
+                h5(class="text-center" id="social")
                   a(href="http://www.freecodecamp.com/tyquan" target="_blank")
                     i(class="fa fa-trophy")
+              div(id="col-lg-2")
+                h5(class="text-center" id="social")
                   a(href="https://www.youtube.com/channel/UCJlAkRDaMAMS5Mlr3125ZWA")
                     i(class="fa fa-youtube" aria-hidden="true")

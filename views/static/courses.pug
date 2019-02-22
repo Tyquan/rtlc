@@ -16,11 +16,11 @@ block content
     div(class="row")
       if (courses.length > 0)
         each course in courses
-          div(class="col")
-            a(href="/static/showcourse/" + course.id)
-              center
-                img(src=course.imageUrl class="img-fluid")
-              h3(class="text-center" id="text")= course.title
+          div(id="col-sm-6")
+            div(class="card")
+              img(src=course.imageUrl class="img-fluid")
+              div(class='card-body')
+                h3(class="card-title")= course.title
       else
         h1(class="text-center") No Courses Added Yet
   div(id="marg")

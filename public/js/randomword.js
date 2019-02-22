@@ -25,16 +25,13 @@ function getRandomQoute() {
 
 function getRandomColor(){
 	var colors = [
-		"F03434",
-		"D91E18",
-		"F22613",
-		"CF000F",
-		"663399",
-		"9A12B3",
+		"F03434", // red
+		"D91E18", // red
+		"F22613", // red
+		"CF000F", // red
 		"013243",
 		"E4F1FE",
 		"1F3A93",
-		"26A65B",
 		"019875",
 		"1E824C",
 		"FABE58",

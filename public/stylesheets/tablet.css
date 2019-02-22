@@ -66,8 +66,14 @@
   }
   #projectImage {
     width: 100%;
-    height: 90px;
+    height: 150px;
   }
+
+  #splash2 h1 {
+    padding-top: 15%;
+    color: white;
+  }
+
   #text {
     font-size: 1.5em;
   }
@@ -90,7 +96,7 @@
     border: 0px solid black;
   }
   #marg {
-    margin-top: 100px;
+    margin-top: 0px;
   }
   #messageSent {
     color: green;
@@ -104,5 +110,17 @@
   }
   #textEditor {
     margin-top: 0px;
+  }
+
+  #workMarg {
+    padding-top: 20%;
+  }
+
+  #collabImage {
+    margin-top: 20%;
+  }
+
+  #meMain {
+    height: 1100px;
   }
 }

@@ -10,11 +10,12 @@ block content
     div(class="row")
       if (blogs.length > 0)
         each blog in blogs
-          div(class="col col-md-2")
-            a(href="/static/showblog/" + blog.id)
-              center
+          div(id="col-sm-6")
+            div(class="card")
+              a(href="/static/showblog/" + blog.id)
                 img(src=blog.imageUrl class="img-fluid")
-              h3(class="text-center" id="text")=blog.title
+                div(class="card-body")
+                  p(class="card-title")=blog.title
       else
         h1(class="text-center") No Blogs Added Yet
   div(id="marg")

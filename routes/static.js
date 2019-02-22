@@ -101,7 +101,7 @@ router.get('/showcourse/:id', (req, res, next) => {
 });
 
 router.get('/allprojects', (req, res, next) => {
-    Project.find({}, (err, data) => {
+    Project.find({}).sort({date_created: -1}).exec((err, data) => {
         if (err) {
             throw err;
         } else {
