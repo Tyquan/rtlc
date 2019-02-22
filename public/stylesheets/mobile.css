@@ -477,7 +477,7 @@
   }
 
   #roi {
-    height: 500px;
+    height: 900px;
     width: 100%;
     background-image: url(../images/goals.jpg);
     background-repeat: no-repeat;
@@ -488,7 +488,7 @@
   }
 
   #workTogether {
-    height: 100%;
+    height: 900px;
     width: 100%;
     background-image: url(../images/collab.png);
     background-repeat: no-repeat;

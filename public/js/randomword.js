@@ -1,9 +1,9 @@
 function getRandomQoute() {
 	var qoutes = [
-		"Website Development",
+		"Web Design",
 		"App Development",
 		"Digital Marketing",
-		"Social Media Marketing",
+		"Social Media",
 		"Advertising",
 		"Content Strategy",
 		"Data Analytics",
